@@ -1,0 +1,14 @@
+input{
+    display: block;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+h2{
+    border: dotted 3px blue;
+    border-radius: 5px;
+    padding: 10px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>HW 1</h1>
+
+    <label for="name">
+        Привіт! Яке твоє ім'я?
+        <input class="name" type="text" id="name" placeholder="Тарас">
+    </label>
+    <label for="last-name">
+        Яке твоє прізвище?
+        <input class="last-name" type="text" id="last-name" placeholder="Тарасович">
+    </label>
+    <button class="hello-user">Sent</button>
+    <h2 class="hello-user-title">NULL</h2>
+    <h2 class="users-years-old-title">NULL</h2>
+
+    <label for="cub-side">
+        Вкажи одну зі сторін квадрату для розрахунку переиметру?
+        <input class="cub-side" type="text" id="cub-side" placeholder="10">
+    </label>
+    <button class="cub-calc">Sent</button>
+    <h2 class="cub-perimetr-title">NULL</h2>
+
+    <label for="rate">
+        Вкажи курс валют гривня до єввро (грн за 1 євро)?
+        <input class="rate" type="text" id="rate" placeholder="40">
+    </label>
+    <label for="value">
+        Вкажи скільки гривень хочеш обміняти?
+        <input class="value" type="text" id="value" placeholder="400">
+    </label>
+    <button class="exchange">Sent</button>
+    <h2 class="exchange-title">NULL</h2>
+
+    <script>
+        console.log('Internal js commit!');
+
+        //hello user and years old calc
+        const now_year = 2023;
+        let user_name = document.querySelector('.name');
+        let user_last_name = document.querySelector('.last-name')
+        let hello_user_run = document.querySelector('.hello-user');
+        let hello_user_title = document.querySelector('.hello-user-title')
+        let users_years_old_title = document.querySelector('.users-years-old-title')
+        hello_user_run.onclick = () => {
+            hello_user_title.innerHTML = `Привіт ${user_name.value} ${user_last_name.value}!`
+            users_years_old_title.innerHTML = `Твій вік ` + (now_year - prompt("Який твій рік народження?"));
+        }
+        /*
+        let user_name= prompt(`Привіт! Яке твоє ім'я?`);
+        let user_last_name= prompt(`Яке твоє прізвище?`);
+        */
+        //---wrong variables
+        // let 5variable
+        // let -variable
+        // let variable-variable
+        // !variable
+        // variable styles: var / let / const
+        // variable styles: camelCase
+
+        //-- cube perimetr
+        let cub_side = document.querySelector('.cub-side');
+        let cub_calc = document.querySelector('.cub-calc');
+        let cub_perimetr_title = document.querySelector('.cub-perimetr-title');
+        cub_calc.onclick = () => {
+            cub_perimetr_title.innerHTML = `Периметр квадрату дорівнює: ${cub_side.value*4}`;
+        }
+        
+        //--exchange
+        const rate = document.querySelector('.rate');
+        let value = document.querySelector('.value');
+        let exchange = document.querySelector('.exchange');
+        let exchange_title = document.querySelector('.exchange-title');
+        exchange.onclick = () => {
+            exchange_title.innerHTML = `${value.value} гривень, по курсу ${rate.value}, становить ${value.value / rate.value} евро`
+        }
+
+    </script>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>
