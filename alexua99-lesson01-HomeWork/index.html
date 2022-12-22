@@ -21,7 +21,8 @@
 
     <section>
         <h4>
-            переводить їх в євро. EUR = 38гр <br>
+            переводить їх в євро. EUR = <span class="exchange-rate">38</span>гр
+            <br>
             Євро к Гривні
         </h4>
         <input type="text" class="name2">
@@ -35,7 +36,23 @@
 
     <script>
         // your code 
+        console.log('.name');
+        let user_name = document.querySelector('.name');
+        let sent_user_name = document.querySelector('.btn1');
+        let out = document.querySelector('.out1')
+        sent_user_name.onclick = () => {
+            //alert (`Привіт: ${user_name.value}!`);
+            out.innerHTML = user_name.value + '!';
+        }
 
+        //---#2---
+        const ex_rate = document.querySelector('.exchange-rate');
+        let hrn = document.querySelector('.name2');
+        let convert = document.querySelector('.btn2');
+        out = document.querySelector('.out2');
+        convert.onclick = () => {
+            out.innerHTML = `${+hrn.value/+ex_rate.textContent} гривень`;
+        }
 
     </script>
 </body>
