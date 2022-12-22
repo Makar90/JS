@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <!-- #2 -->
+    <h1>LESSON 1</h1>
+    <input class="num1" type="text">
+    +
+    <input class="num2" type="text">
+    =
+    <span class="res">0</span>
+    <br>
+    <br>
+    <button>SUM</button>
+</body>
+
+<script>
+    console.log('Test');
+
+    //#1
+    /*
+    let name= prompt("Your name");
+    let age= +prompt("Your age");  //convert to integer
+    //document.write('Name: ' + name + "\rAge: "+ age);
+    document.write('Name: ' + name);
+    document.write(" Age: "+ age);
+    alert('Name: ' + name + "\rAge: "+ age);
+    */
+
+    //#2
+    console.log('.num1');
+    let n1 = document.querySelector('.num1');
+    let n2 = document.querySelector('.num2');
+    let res = document.querySelector('.res');
+    let button = document.querySelector('button');
+    button.onclick = () => {
+        console.log('klick');
+        res.innerHTML = +n1.value + +n2.value;
+    }
+
+    //#3
+    /* alert('In UAH: \n' + +prompt('How much dollars to exchange?')*38 + ' hrn'); */
+    //#3.1
+    const dollar = +prompt('Який курс долара до гривні?');
+    let hrn = +prompt('Скільки доларів хочеш обміняти?') * dollar;
+    alert (`В гривнях це буде:\n${hrn} грн`);
+</script>
+
+</html>
