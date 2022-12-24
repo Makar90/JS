@@ -49,9 +49,13 @@
         const ex_rate = document.querySelector('.exchange-rate');
         let hrn = document.querySelector('.name2');
         let convert = document.querySelector('.btn2');
-        out = document.querySelector('.out2');
+        out2 = document.querySelector('.out2');
         convert.onclick = () => {
-            out.innerHTML = `${+hrn.value/+ex_rate.textContent} гривень`;
+            if(isNaN(hrn.value)){
+                out2.innerHTML = `Введено не число`;
+            }else{
+                out2.innerHTML = `${+hrn.value/+ex_rate.textContent} гривень`;
+            }
         }
 
     </script>
