@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+      select {
+        padding: 5px;
+        font-size: 20px;
+        width: 150px;
+        border-radius: 5px;
+      }
+      label:hover {
+        cursor: pointer;
+      }
+      button {
+        padding: 15px;
+        margin-top: 20px;
+        background-color: yellow;
+        border-radius: 5px;
+        font-weight: 700;
+        width: 320px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      span {
+        padding: 5px;
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Гра камінь/ножниці</h1>
+    <select class="select" name="" id="">
+      <option name="option" value="Камінь">Камінь</option>
+      <option name="option" value="Ножиці">Ножиці</option>
+      <option name="option" value="Папір">Папір</option>
+    </select>
+    <label for="isRan">
+      <input
+        class="isRand"
+        type="checkbox"
+        id="isRan"
+        onchange="handleChange(this);"
+      />
+      Random user choise
+    </label>
+    <br />
+    <button>Грати</button>
+    <h2>
+      Pезультат (користувач VS бот):
+      <span class="out">NULL</span>
+    </h2>
+    <h2>
+      Переможець:
+      <span class="winner">NULL</span>
+    </h2>
+    <script>
+      //test new
+      function handleChange(checkbox) {
+        if (checkbox.checked == true) {
+          document.querySelector('label[for="isRan"]').style =
+            "font-weight: 700";
+          document.querySelector(".select").style = "color:gray; opacity:0.4;";
+        } else {
+          document.querySelector('label[for="isRan"]').style =
+            "font-weight: none";
+          document.querySelector(".select").style = "color:black; opacity:1;";
+        }
+      }
+      // test new end--------------
+
+      let select = document.querySelector(".select");
+      let option = document.querySelectorAll('option[name="option"]');
+      /* const checkboxes = document.querySelectorAll('input[name="color"]');
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = checked;
+      }); */
+      let button = document.querySelector("button");
+      let isRand = document.querySelector(".isRand");
+      let out = document.querySelector(".out");
+      let winner = document.querySelector(".winner");
+
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      // 0 = камінь 1 = ножиці 2 = бумага 3 = колодяц
+      button.onclick = () => {
+        //isRand.checked && getRandomChoise();
+        if (isRand.checked) select.selectedIndex = getRandomInt(select.length);
+        let userChoise = option[select.selectedIndex].value;
+        let botChoise = option[getRandomInt(select.length)].value;
+        out.innerHTML = `${userChoise} VS ${botChoise}`;
+        //out.innerHTML += ` ${select.length}`;
+        if (userChoise == botChoise) winner.innerHTML = `Нічия`;
+        else if (
+          (userChoise == "Камінь" && botChoise == "Ножиці") ||
+          (userChoise == "Ножиці" && botChoise == "Папір") ||
+          (userChoise == "Папір" && botChoise == "Камінь")
+        )
+          winner.innerHTML = `Переміг користувач`;
+        else winner.innerHTML = `Переміг бот`;
+      };
+    </script>
+  </body>
+</html>

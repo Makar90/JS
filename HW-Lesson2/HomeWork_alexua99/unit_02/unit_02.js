@@ -68,7 +68,7 @@ function t9() {
 }
 
 document.querySelector('.b-9').onclick = t9;
-//document.querySelector('.i-9').value = 'start';
+document.querySelector('.i-9').value = 3;
 
 
 // Task 10.
