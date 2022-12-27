@@ -90,12 +90,12 @@ btn6.onclick = () => {
 }
 
 //Task Hard 2
-let act7_1 = document.querySelector('.act-7-1');
-let act7_2 = document.querySelector('.act-7-2');
-let act7_3 = document.querySelector('.act-7-3');
-let out7_1 = document.querySelector('.out-7-1');
-let out7_2 = document.querySelector('.out-7-2');
-let out7_3 = document.querySelector('.out-7-3');
+
+
+
+
+
+
 
 function conditionOut(con, out) {
     if (eval(con.textContent))
@@ -104,12 +104,20 @@ function conditionOut(con, out) {
         out.value = false;
 }
 
+let act7_1 = document.querySelector('.act-7-1');
+let out7_1 = document.querySelector('.out-7-1');
 act7_1.onclick = () => {
     conditionOut(act7_1, out7_1);
 }
+
+let act7_2 = document.querySelector('.act-7-2');
+let out7_2 = document.querySelector('.out-7-2');
 act7_2.onclick = () => {
     conditionOut(act7_2, out7_2);
 }
+
+let act7_3 = document.querySelector('.act-7-3');
+let out7_3 = document.querySelector('.out-7-3');
 act7_3.onclick = () => {
     conditionOut(act7_3, out7_3);
 }
