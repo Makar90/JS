@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body style="padding: 30px">
     <h1>HW Lesson2</h1>
     <h2>Мінімум</h2>
     <ol>
@@ -161,6 +161,99 @@
       </li>
     </ol>
 
+    <h2>Максимум</h2>
+    <ol>
+      <li>
+        <p>
+          Користувач вводить суму вкладу в банк на 2 місяці, з процентною
+          ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
+        </p>
+        <div>
+          <label for="money-1" style="display: block">
+            <input
+              class="inp-6-1"
+              type="text"
+              placeholder="Сума вкладу?"
+              id="money=1"
+              value="100"
+            />
+            Сума вкладу?
+          </label>
+          <label for="perc" style="display: block">
+            <!--  <input
+              class="inp-4-2"
+              type="text"
+              placeholder="Розмір файлу в Mb?"
+              value="5"
+              id="perc"
+            /> -->
+            <select
+              name="percent"
+              class="inp-6-2"
+              id="perc"
+              style="width: 100px"
+            >
+              <option value="5">5%</option>
+              <option value="10" selected>10%</option>
+              <option value="15">15%</option>
+            </select>
+            Ставка депозиту % річних?
+          </label>
+          <label for="mon" style="display: block">
+            <select name="mounth" class="inp-6-3" id="mon" style="width: 100px">
+              <option value="1">1міс</option>
+              <option value="2" selected>2міс</option>
+              <option value="12">12міс</option>
+            </select>
+            Термін вкладу?
+          </label>
+          <label for="res-6" style="display: block; margin-top: 10px">
+            <input
+              class="out-6-1"
+              type="text"
+              name=""
+              placeholder="OUT"
+              style="background-color: rgba(0, 128, 0, 0.555)"
+              id="res-6"
+            />
+            Сума відцотків
+          </label>
+          <button class="btn-6">Go!</button>
+        </div>
+      </li>
+      <li>
+        <p>Що повернуть вирази:</p>
+        <div>
+          <label for="n-1" style="display: flex; width: 300px">
+            <p class="act-7-1" style="width: 50%">2 && 0 && 3</p>
+            <input
+              class="out-7-1"
+              type="text"
+              id="n-1"
+              placeholder="Клацніть на вираз зліва"
+            />
+          </label>
+          <label for="n-2" style="display: flex; width: 300px">
+            <p class="act-7-2" style="width: 50%">2 || 0 || 3</p>
+            <input
+              class="out-7-2"
+              type="text"
+              id="n-2"
+              placeholder="Клацніть на вираз зліва"
+            />
+          </label>
+          <label for="n-3" style="display: flex; width: 300px">
+            <p class="act-7-3" style="width: 50%">2 && 0 || 3</p>
+            <input
+              class="out-7-3"
+              type="text"
+              id="n-3"
+              placeholder="Клацніть на вираз зліва"
+            />
+          </label>
+        </div>
+      </li>
+    </ol>
     <script src="./script.js"></script>
   </body>
 </html>
