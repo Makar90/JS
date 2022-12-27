@@ -101,8 +101,9 @@
         let botChoise = option[getRandomInt(select.length)].value;
         out.innerHTML = `${userChoise} VS ${botChoise}`;
         //out.innerHTML += ` ${select.length}`;
-        if (userChoise == botChoise) winner.innerHTML = `Нічия`;
-        else if (
+        if (userChoise == botChoise) {
+          winner.innerHTML = `Нічия`;
+        } else if (
           (userChoise == "Камінь" && botChoise == "Ножиці") ||
           (userChoise == "Ножиці" && botChoise == "Папір") ||
           (userChoise == "Папір" && botChoise == "Камінь")
