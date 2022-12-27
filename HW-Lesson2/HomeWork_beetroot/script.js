@@ -41,4 +41,34 @@ btn3.onclick = () => {
     console.log('btn-3 click');
 }
 
+let btn4 = document.querySelector('.btn-4');
+btn4.onclick = () => {
+    let out1 = document.querySelector('.out-4-1');
+    let out2 = document.querySelector('.out-4-2');
+    let inp1 = document.querySelector('.inp-4-1');
+    let inp2 = document.querySelector('.inp-4-2');
+    if (isNaN(inp1.value) || isNaN(inp2.value))
+        out.value = 'Введіть числа';
+    else {
+        out1.value = Math.floor(inp1.value / inp2.value);
+        out2.value = (inp1.value % inp2.value).toFixed(2);
+        /* out2.value = inp1.value / inp2.value - Math.floor(inp1.value / inp2.value).toFixed(2); */
+    }
+    console.log('btn-4 click');
+}
+
+let btn5 = document.querySelector('.btn-5');
+btn5.onclick = () => {
+    let out = document.querySelector('.out-5-1');
+    out.value = '';
+    //document.querySelector('.out-5-1') = '';
+    let inp = document.querySelector('.inp-5-1').value;
+    while (inp >= 10) {
+        out.value += inp % 10;
+        inp = (inp - inp % 10) / 10;
+    }
+    out.value += inp;
+    console.log('btn-5 click');
+}
+
 //

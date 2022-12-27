@@ -7,6 +7,8 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>HW Lesson2</h1>
+    <h2>Мінімум</h2>
     <ol>
       <li>
         <p>
@@ -37,13 +39,128 @@
           скільки файлів розміром в 820 Мб поміщається на флешку.
         </p>
         <div>
-          <input class="inp-3-1" type="text" placeholder="Об'єм флешки в GB?" />
-          <input class="inp-3-2" type="text" placeholder="Розмір файлу в Mb?" />
-          <input class="out-3" type="text" name="" id="" placeholder="OUT" />
+          <label for="flash" style="display: block">
+            <input
+              class="inp-3-1"
+              type="text"
+              placeholder="Об'єм флешки в GB?"
+              id="flash"
+              value="3"
+            />
+            Об'єм флешки в GB?
+          </label>
+          <label for="file" style="display: block">
+            <input
+              class="inp-3-2"
+              type="text"
+              placeholder="Розмір файлу в Mb?"
+              value="1024"
+              id="file"
+            />
+            Розмір файлу в Mb?
+          </label>
+          <label for="res-3" style="display: block; margin-top: 10px">
+            <input
+              class="out-3"
+              type="text"
+              name=""
+              placeholder="OUT"
+              style="background-color: rgba(0, 128, 0, 0.555)"
+              id="res-3"
+            />
+            Cкільки файлів поміщається на флешку
+          </label>
           <button class="btn-3">Go!</button>
         </div>
       </li>
     </ol>
+
+    <h2>Норма</h2>
+    <ol>
+      <li>
+        <p>
+          Користувач вводить суму грошей в гаманці і ціну однієї шоколадки.
+          Програма виводить скільки шоколадок може купити користувач і скільки
+          здачі у нього залишиться.
+        </p>
+        <div>
+          <label for="money" style="display: block">
+            <input
+              class="inp-4-1"
+              type="text"
+              placeholder="Об'єм флешки в GB?"
+              id="money"
+              value="100"
+            />
+            Сумма грошей в гаманці?
+          </label>
+          <label for="price" style="display: block">
+            <input
+              class="inp-4-2"
+              type="text"
+              placeholder="Розмір файлу в Mb?"
+              value="33.3"
+              id="price"
+            />
+            Ціна однієї шоколадки?
+          </label>
+          <label for="res-4" style="display: block; margin-top: 10px">
+            <input
+              class="out-4-1"
+              type="text"
+              name=""
+              placeholder="OUT"
+              style="background-color: rgba(0, 128, 0, 0.555)"
+              id="res-4"
+            />
+            Скільки шоколадок може купити користувач
+          </label>
+          <label for="res-4-2" style="display: block">
+            <input
+              class="out-4-2"
+              type="text"
+              name=""
+              placeholder="OUT"
+              style="background-color: rgba(0, 128, 0, 0.555)"
+              id="res-4-2"
+            />
+            Скільки здачі у нього залишиться
+          </label>
+          <button class="btn-4">Go!</button>
+        </div>
+      </li>
+      <li>
+        <p>
+          Запитай у користувача тризначне число і виведи його задом наперед. Для
+          вирішення завдання тобі знадобиться оператор % (залишок від ділення).
+        </p>
+        <div>
+          <label for="number" style="display: block">
+            <input
+              class="inp-5-1"
+              type="text"
+              placeholder="Введіть число?"
+              id="number"
+              value="1234567890"
+            />
+            Введіть тризначне число
+          </label>
+          <label for="res-5" style="display: block; margin-top: 10px">
+            <input
+              class="out-5-1"
+              type="text"
+              name=""
+              placeholder="OUT"
+              style="background-color: rgba(0, 128, 0, 0.555)"
+              id="res-5"
+            />
+            Число задом наперед
+          </label>
+          <button class="btn-5">Go!</button>
+        </div>
+      </li>
+    </ol>
+
     <script src="./script.js"></script>
   </body>
 </html>
