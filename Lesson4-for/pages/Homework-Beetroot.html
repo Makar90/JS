@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Beetroot</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .taskArea {
+        padding: 10px;
+      }
+      .subTaskArea {
+        padding: 5px 0 20px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="wrapper"
+      style="display: flex; flex-direction: column; height: 100vh"
+    >
+      <div class="header">
+        <h1 style="margin: 10px">
+          <a
+            href="https://lms.beetroot.academy/myCourses/lesson/cl8le99qa6sbx0727091xgftq"
+            target="_blank"
+            >CSS Lesson4 - "Цикли й умови"</a
+          >
+        </h1>
+        <nav>
+          <ul>
+            <li style="list-style: none">
+              <a href="../index.html">Main</a>
+            </li>
+            <li style="list-style: none">
+              <a href="../pages/classRoom.html">Classroom</a>
+            </li>
+            <li style="list-style: none">
+              <a href="../pages/Homework-Sasha.html">Homework Sasha</a>
+            </li>
+            <li style="list-style: none; background-color: aquamarine">
+              <a href="../pages/Homework-Beetroot.html">Homework Beetroot</a>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+      </div>
+
+      <div class="main" style="flex-grow: 1; margin: 30px">
+        <h2 style="margin-bottom: 15px">Homework Beetroot</h2>
+        <div class="taskArea">
+          <h3>Мінімум</h3>
+          <ol>
+            <li>
+              Запитай у користувача його вік і визначи, ким він є: дитиною
+              (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60
+              ...), передбач можливість введення невірних даних.
+              <div class="subTaskArea">
+                <input class="inp1_1" type="text" placeholder="вік?" />
+                <p>
+                  Answer:
+                  <span class="out1_1">
+                    ким він є: дитиною (0-11), підлітком (12-17), дорослим
+                    (18_59) або пенсіонером (60 ...)?</span
+                  >
+                </p>
+                <button class="btn1_1">Go!</button>
+              </div>
+            </li>
+            <li>
+              Запитай у користувача число від 0 до 9 і виведи йому спецсимвол,
+              який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
+              <div class="subTaskArea">
+                <input
+                  class="inp2_1"
+                  type="text"
+                  placeholder="число від 0 до 9?"
+                />
+                <p>
+                  Answer:
+                  <span class="out2_1"> спецсимвол?</span>
+                </p>
+                <button class="btn2_1">Go!</button>
+              </div>
+            </li>
+            <li>
+              Підрахуй суму всіх чисел в заданому користувачем діапазоні.
+              <div class="subTaskArea">
+                <input
+                  class="inp3_1"
+                  type="text"
+                  placeholder="діапазон start?"
+                />
+                <input class="inp3_2" type="text" placeholder="діапазон end?" />
+                <p>
+                  Answer:
+                  <span class="out3_1">
+                    сума всіх чисел в заданому діапазоні?</span
+                  >
+                </p>
+                <button class="btn3_1">Go!</button>
+              </div>
+            </li>
+            <li>
+              Запитай у користувача 2 числа і знайди найбільший спільний
+              дільник.
+              <div class="subTaskArea">
+                <input class="inp4_1" type="text" placeholder="число 1?" />
+                <input class="inp4_2" type="text" placeholder="число 2?" />
+                <p>
+                  Answer:
+                  <span class="out4_1">найбільший спільний дільник?</span>
+                </p>
+                <button class="btn4_1">Go!</button>
+              </div>
+            </li>
+            <li>
+              Запитай у користувача число і виведи всі дільники цього числа.
+              <div class="subTaskArea">
+                <input class="inp5_1" type="text" placeholder="число?" />
+                <p>
+                  Answer:
+                  <span class="out5_1">всі дільники цього числа?</span>
+                </p>
+                <button class="btn5_1">Go!</button>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="taskArea">
+          <h3>Норма</h3>
+          <ol>
+            <li>
+              Запитай у користувача п’ятирозрядне число і визначи, чи є воно
+              паліндромом.
+              <div class="subTaskArea">
+                <input
+                  class="inpN1_1"
+                  type="text"
+                  placeholder="п’ятирозрядне число?"
+                />
+                <p>
+                  Answer:
+                  <span class="outN1_1"> чи є воно паліндромом?</span>
+                </p>
+                <button class="btnN1_1">Go!</button>
+              </div>
+            </li>
+            <li>
+              Запитай у користувача суму покупки і виведи суму до оплати зі
+              знижкою: від 200 до 300 - знижка буде 3%; від 300 до 500 - 5%; від
+              500 і вище - 7%.
+              <div class="subTaskArea">
+                <input
+                  class="inpN2_1"
+                  type="text"
+                  placeholder="сума покупки?"
+                />
+                <p>
+                  Answer:
+                  <span class="outN2_1"> знижка буде?</span>
+                </p>
+                <button class="btnN2_1">Go!</button>
+              </div>
+            </li>
+            <li>
+              Запитай у користувача 10 чисел і порахуй, скільки він ввів
+              додатніх, від’ємних і нулів. При цьому також порахуй, скільки з
+              них парних і непарних. Виведи статистику на екран. Враховуй, що
+              достатньо однієї змінної (не 10) для введення чисел користувачем.
+              <div class="subTaskArea">
+                <input
+                  class="inpN3_1"
+                  type="text"
+                  placeholder="10 чисел?"
+                  style="width: 50%"
+                  value="12 10 gfh 45"
+                />
+                <p>
+                  Answer:
+                  <span class="outN3_1">
+                    скільки додатніх, від’ємних і нулів [скільки з них парних і
+                    непарних]?</span
+                  >
+                </p>
+                <button class="btnN3_1">Go!</button>
+              </div>
+            </li>
+            <li>
+              Зацикли відображення днів тижня таким чином: «День тижня. Хочеш
+              побачити наступний день? » і так до тих пір, поки користувач
+              натискає OK.
+              <div class="subTaskArea">
+                <select class="inpN4_1" name="" id="">
+                  <option name="weekDay" value="Понеділок">Понеділок</option>
+                  <option name="weekDay" value="Вівторок">Вівторок</option>
+                  <option name="weekDay" value="Середа">Середа</option>
+                  <option name="weekDay" value="Четвер">Четвер</option>
+                  <option name="weekDay" value="П'ятниця">П'ятниця</option>
+                  <option name="weekDay" value="Субота">Субота</option>
+                  <option name="weekDay" value="Неділя">Неділя</option>
+                </select>
+                <p>
+                  наступний день тижня =>
+                  <span class="outN4_1" style="color: red"></span>
+                </p>
+                <button class="btnN4_1">Відобразити наступний день</button>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div
+        class="footer"
+        style="margin-top: auto; background-color: blueviolet"
+      >
+        <p style="text-align: center; margin: 20px; color: white">
+          Igor Makarenko 2023
+        </p>
+      </div>
+    </div>
+
+    <script src="../js/Homework-Beetroot.js"></script>
+  </body>
+</html>

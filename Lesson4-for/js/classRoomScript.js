@@ -1,4 +1,4 @@
-console.log('External script commit');
+console.log('Test classRoomScript');
 
 let out1 = document.querySelector('.out1');
 let out2 = document.querySelector('.out2');
