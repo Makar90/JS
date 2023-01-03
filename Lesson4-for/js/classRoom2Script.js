@@ -49,14 +49,12 @@ let btn4 = document.querySelector('.btn4');
 
 btn4.onclick = () => {
     let inp4_1 = document.querySelector('.inp4_1').value;
-    //let inp3_2 = document.querySelector('.inp3_2').value;
     out4.innerHTML = '';
     for (let i = 0; i < inp4_1; i++) {
-        //out3.innerHTML += `i ${i}_`;
         for (let j = 0; j < inp4_1; j++) {
             out4.innerHTML += `${i}${j}_`;
-            if (j + 1 == inp4_1) {
-                out4.innerHTML += `${i + 1}${0}`;
+            if (j + 1 >= inp4_1) {
+                out4.innerHTML += `${i}${j + 1 * i + 1}`;
             }
         }
         out4.innerHTML += `<br>`;
