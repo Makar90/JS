@@ -152,15 +152,88 @@ btnN2_1.onclick = () => {
 //#3
 btnN3_1.onclick = () => {
     let inp = document.querySelector('.inpN3_1');
+    let inpV = inp.value;
     let out = document.querySelector('.outN3_1');
-    for (let i = 0; i < inp.value.length - 1; i++) {
 
-        if (!Number.isInteger(inp.value[i]) || inp.value[i] != '.') {
-            inp.value[i] = ';';
-            out.innerHTML += `${inp.value[i]}`;
+    inpV = inpV.replace(/[^0-9.-]+/g, ";");
+    console.log(inpV);
+    inpV = inpV.replace(/[-]+/g, ";-");
+    console.log(inpV);
+    inpV = inpV.replace(/[;]+/g, ";");
+    console.log(inpV);
+    inp.value = inpV;
+    let arr = [];
+    let buf = '';
+    let count = 0;
+    console.log(inpV.length);
+    for (let i = 0; i < inpV.length; i++) {
+        console.log(inpV[i] + " " + i);
+        if (inpV[i] != ';') {
+            buf += inpV[i];
+        } else {
+            arr[count] = buf;
+            buf = '';
+            count++;
+        }
+        if (i + 1 >= inpV.length && buf != '') {
+            arr[count] = buf;
+            buf = '';
+            count++;
         }
     }
-    console.log(inp.value);
+    console.log(arr);
+
+    let plus = 0;
+    let minus = 0;
+    let zero = 0;
+    let parne = 0;
+    let neparne = 0;
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i] + ' ' + i);
+        if (arr[i] > 0) {
+            plus++;
+        } else if (arr[i] < 0) {
+            minus++;
+        } else {
+            zero++;
+        }
+        if ((arr[i] % 2) == 0 && arr[i] != 0) {
+            parne++;
+        } else if (arr[i] != 0) {
+            console.log("nep " + arr[i]);
+            neparne++;
+        }
+    }
+    out.innerHTML = `Всього: ${arr.length}; Додатніх: ${plus}; Від'ємних: ${minus}; Нулів: ${zero}; Парних: ${parne}; Непарних: ${neparne};`;
+
+
+    /*inp = inp.replace(/\D/ig, ";");
+    console.log(inp);*/
+    /*let arr = [];
+    let buf = '';
+    let k = 0;
+    for (let i = 0; i < inp.value.length; i++) {
+        //console.log(`${inp.value[i]} ` + parseInt(inp.value[i]));
+        if (+inp.value[i] != ' ') {
+            if (parseInt(+inp.value[i], 10) || inp.value[i] == '.') {
+                buf += inp.value[i];
+                console.log(buf);
+            } else if (inp.value[i] == '-') {
+                arr[k] = buf;
+                console.log('- ' + buf);
+                buf = inp.value[i];
+                k++;
+            } else {
+                arr[k] = buf;
+                console.log('- ' + buf);
+                buf = '';
+                k++;
+            }
+        }
+    }
+    arr[k] = buf;
+    console.log(arr);
+*/
 }
 
 //#4
