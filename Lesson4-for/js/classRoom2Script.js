@@ -54,7 +54,7 @@ btn4.onclick = () => {
         for (let j = 0; j < inp4_1; j++) {
             out4.innerHTML += `${i}${j}_`;
             if (j + 1 >= inp4_1) {
-                out4.innerHTML += `${i}${j + 1 * i + 1}`;
+                out4.innerHTML += `${(i + 1)}0`;
             }
         }
         out4.innerHTML += `<br>`;
