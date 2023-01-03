@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-            * {
+      * {
         margin: 0;
-        //padding: 0;
         box-sizing: border-box;
       }
       input, select, ol {
@@ -85,11 +84,20 @@
           <option value="Vika">Vika</option>
         </select>
 
-        <input class="inp2" type="number" value="3">
+        <input class="inp2" type="number" value="10" min="5" max="100">
 
         <ol class="out2"></ol>
-        
+
         <button class="btn2">Clear</button>
+      </div>
+
+      <div class="div">
+        <p>Макс висота (рядків)</p>
+        <input class="inp3_1" type="number" value="10" min="5" max="100">
+        <p>Макс ширина (символів)</p>
+        <input class="inp3_2" type="number" value="10" min="5" max="100">
+        <p class="out3"></p>
+        <button class="btn3">Go!</button>
       </div>
 
 
