@@ -11,10 +11,13 @@
         //padding: 0;
         box-sizing: border-box;
       }
-      input {
+      input, select, ol {
         display: block;
         padding: 5px;
         margin-bottom: 10px;
+      }
+      ol{
+        padding-left:20px;
       }
       .div {
         padding: 10px;
@@ -69,7 +72,28 @@
 
       <div class="main" style="flex-grow: 1; margin: 30px">
         <h2 style="margin-bottom: 15px">Classroom2</h2>
+        <div class="div">
+        <input class="inp1" type="text">
+        <button class="btn1">Go!</button>
+      </div>
 
+      <div class="div">
+        <select class="polyInp2" name="" id="">
+          <option value="Sasha">Sasha</option>
+          <option value="Sveta">Sveta</option>
+          <option value="Olha">Olha</option>
+          <option value="Vika">Vika</option>
+        </select>
+
+        <input class="inp2" type="number" value="3">
+
+        <ol class="out2">
+          
+        </ol>
+
+        <button class="btn2">Reset</button>
+
+      </div>
       </div>
 
         <div
