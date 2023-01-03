@@ -7,11 +7,12 @@ let btn2 = document.querySelector('.btn2');
 
 polyInp2.onchange = () => {
     out2.innerHTML = '';
-    if (inp2.value != '')
+    if (inp2.value != '') {
         for (let i = 0; i < inp2.value; i++) {
             out2.innerHTML += `<li> ${polyInp2.value} </li>`;
-        } else {
-        out2.innerHTML += `Ви не ввели число`;
+        }
+    } else {
+        out2.innerHTML += `Ви не ввели число!`;
     }
 }
 
