@@ -31,17 +31,39 @@ btn2.onclick = () => {
 
 let out3 = document.querySelector('.out3');
 let btn3 = document.querySelector('.btn3');
-let inp3_1 = document.querySelector('.inp3_1').value;
-let inp3_2 = document.querySelector('.inp3_2').value;
 
 btn3.onclick = () => {
+    let inp3_1 = document.querySelector('.inp3_1').value;
+    //let inp3_2 = document.querySelector('.inp3_2').value;
+    out3.innerHTML = '';
     for (let i = 0; i < inp3_1; i++) {
-        for (let j = i; j < inp3_2; j++) {
+        for (let j = i; j < inp3_1; j++) {
             out3.innerHTML += `*`;
         }
         out3.innerHTML += `<br>`;
     }
 }
+
+let out4 = document.querySelector('.out4');
+let btn4 = document.querySelector('.btn4');
+
+btn4.onclick = () => {
+    let inp4_1 = document.querySelector('.inp4_1').value;
+    //let inp3_2 = document.querySelector('.inp3_2').value;
+    out4.innerHTML = '';
+    for (let i = 0; i < inp4_1; i++) {
+        //out3.innerHTML += `i ${i}_`;
+        for (let j = 0; j < inp4_1; j++) {
+            out4.innerHTML += `${i}${j}_`;
+            if (j + 1 == inp4_1) {
+                out4.innerHTML += `${i + 1}${0}`;
+            }
+        }
+        out4.innerHTML += `<br>`;
+    }
+
+}
+
 
 
 
