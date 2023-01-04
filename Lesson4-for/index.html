@@ -1,91 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        //padding: 0;
-        box-sizing: border-box;
-      }
-    </style>
-  </head>
-  <body>
-    <div
-      class="wrapper"
-      style="display: flex; flex-direction: column; height: 100vh"
-    >
-      <div class="header">
-        <h1 style="margin: 10px">
-          <a
-            href="https://lms.beetroot.academy/myCourses/lesson/cl8le99qa6sbx0727091xgftq"
-            target="_blank"
-            >CSS Lesson4 - "Цикли й умови"</a
-          >
-        </h1>
-        <nav>
-          <ul>
-            <li style="list-style: none; background-color: aquamarine">
-              <a href="./index.html">Main</a>
-            </li>
-            <li style="list-style: none">
-              <a href="./pages/classRoom.html">Classroom</a>
-            </li>
-            <li style="list-style: none">
-              <a href="./pages/classRoom2.html">Classroom2 03.01.2023</a>
-            </li>
-            <li style="list-style: none">
-              <a href="./pages/Homework-Sasha.html">Homework Sasha</a>
-            </li>
-            <li style="list-style: none">
-              <a href="./pages/Homework-Beetroot.html">Homework Beetroot</a>
-            </li>
-          </ul>
-        </nav>
-        <hr />
-      </div>
+    <style></style>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
 
-      <div class="main" style="flex-grow: 1; margin: 30px; padding: 100px 0">
-        <h2 style="text-align: center">PREVIEW</h2>
-        <h2>Clasroom</h2>
-        <iframe
-          src="./pages/classRoom.html"
-          frameborder="0"
-          width="100%"
-          height="30%"
-          style="border-radius: 20px; border: solid 5px blue"
-        ></iframe>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__container">
+                <label class="header__MenuLabel" for="nav">
+                    <h1 class="header__title">
+                        <a class="header__titleLink link" href="./index.html">JS
+                            Notebook
+                        </a>
+                    </h1>
+                    <nav class="NavMenu" id="nav">
+                        <ul>
+                            <li class="NavMenu__item NavMenu__item-selected">
+                                <a class="NavMenu__link link" href="./index.html">Main</a>
+                            </li>
+                            <li class="NavMenu__item">
+                                <a class="NavMenu__link link" href="#"></a>
+                                Lesson4 (29.12.2022)
+                                <ul>
+                                    <li class="NavMenu__subtem">
+                                        <a class="NavMenu__link link" href="./pages/classRoom-4.html">Classroom</a>
+                                    </li>
+                                    <li class="NavMenu__subtem">
+                                        <a class="NavMenu__link link" href="./pages/Homework-Beetroot-4.html">Homework
+                                            Beetroot4</a>
+                                    </li>
+                                    <li class="NavMenu__subtem">
+                                        <a class="NavMenu__link link" href="./pages/Homework-Sasha-4.html">Homework
+                                            Sasha4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="NavMenu__item">
+                                <a class="NavMenu__link link" href="#"></a>
+                                Lesson 5 (03.01.2023)
+                                <ul>
+                                    <li class="NavMenu__subtem">
+                                        <a class="NavMenu__link link" href="./pages/classRoom-5.html">Classroom</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </label>
+            </div>
+        </div>
 
-        <h2>Homework Sasha</h2>
-        <iframe
-          src="./pages/Homework-Sasha.html"
-          frameborder="0"
-          width="100%"
-          height="30%"
-          style="border-radius: 20px; border: solid 5px blue"
-        ></iframe>
 
-        <h2>Homework Beetroot</h2>
-        <iframe
-          src="./pages/Homework-Beetroot.html"
-          frameborder="0"
-          width="100%"
-          height="30%"
-          style="border-radius: 20px; border: solid 5px blue"
-        ></iframe>
-      </div>
+        <div class="main">
+            <div class="main__container">
+                <!-- <section>
+                    <h2 style="text-align: center">PREVIEW</h2>
+                    <h2>Clasroom</h2>
+                    <iframe src="./pages/classRoom.html" frameborder="0" width="100%" height="30%"
+                        style="border-radius: 20px; border: solid 5px blue"></iframe>
+                </section>
 
-      <div
-        class="footer"
-        style="margin-top: auto; background-color: blueviolet"
-      >
-        <p style="text-align: center; margin: 20px; color: white">
-          Igor Makarenko 2023
-        </p>
-      </div>
+                <section>
+                    <h2>Homework Sasha</h2>
+                    <iframe src="./pages/Homework-Sasha.html" frameborder="0" width="100%" height="30%"
+                        style="border-radius: 20px; border: solid 5px blue"></iframe>
+                </section>
+
+                <section>
+                    <h2>Homework Beetroot</h2>
+                    <iframe src="./pages/Homework-Beetroot.html" frameborder="0" width="100%" height="30%"
+                        style="border-radius: 20px; border: solid 5px blue"></iframe>
+                </section> -->
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="footer__container">
+                <p class="footer__copyright">
+                    Igor Makarenko 2023
+                </p>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>

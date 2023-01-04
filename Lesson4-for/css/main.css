@@ -1,0 +1,105 @@
+/*-----RESET CSS Start-----*/
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*-----RESET CSS End-----*/
+
+
+
+
+
+/*-----GLOBAL CSS Start-----*/
+.wrapper{
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh;
+}
+.main{
+    flex-grow: 1; 
+    margin: 30px;
+    padding: 100px 0;
+} 
+.footer{
+    margin-top: auto; 
+    background-color: blueviolet;
+} 
+
+.link{
+    text-decoration: none;
+    color:blue;
+}
+.link:hover{
+        cursor:pointer;
+        border-radius:15px;
+        padding: 0 4px;
+        background-color:orange;
+}
+/*-----GLOBAL CSS End-----*/
+
+
+
+
+
+/*-----HEADER Start-----*/
+.header__title{
+    padding:50px;
+    text-align: center;
+}
+.header__titleLink{
+    padding:10px;
+    border-radius:10px;
+    background-color:gray;
+}
+
+.header__MenuLabel:hover .NavMenu{
+    display: list-item;
+}
+
+.NavMenu{
+    padding: 0 100px;
+    display: none;
+}
+.NavMenu__item{
+    padding:10px 8px;
+    font-size: 20px;
+    list-style: none; 
+}
+/* .NavMenu__item:hover .NavMenu__subtem{
+    display:list-item
+} */
+
+.NavMenu__subtem{
+    padding:0 8px;
+    margin-left:40px;
+    font-size: 16px;
+    /* display: none; */
+}
+.NavMenu__item-selected{
+    border-radius:15px;
+    background-color: aquamarine;
+}
+
+
+.NavMenu__link{
+    display: block;
+}
+.NavMenu__link:hover{
+    transform: scale(1,1.1);
+    font-weight: 600;
+}
+/*-----HEADER End-----*/
+
+
+
+
+
+
+/*-----FOOTER Start-----*/
+.footer__copyright{
+    text-align: center;
+    margin: 20px;
+    color: white;
+}
+/*-----FOOTER End-----*/
