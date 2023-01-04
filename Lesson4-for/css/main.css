@@ -17,6 +17,10 @@ button{
 button:hover{
     cursor:pointer;
 }
+
+ol{
+    margin-left: 20px; 
+}
 /*-----RESET CSS End-----*/
 
 
