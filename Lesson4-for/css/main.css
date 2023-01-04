@@ -4,6 +4,19 @@
     padding:0;
     box-sizing: border-box;
 }
+
+textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+button{
+    border-radius:10px;
+    padding:2px;
+    min-width:50px;
+}
+button:hover{
+    cursor:pointer;
+}
 /*-----RESET CSS End-----*/
 
 
@@ -16,10 +29,12 @@
     flex-direction: column; 
     height: 100vh;
 }
+.container{
+    padding: 20px 20px;
+}
+
 .main{
-    flex-grow: 1; 
-    margin: 30px;
-    padding: 100px 0;
+    /* flex-grow: 1; */
 } 
 .footer{
     margin-top: auto; 
@@ -43,33 +58,41 @@
 
 
 /*-----HEADER Start-----*/
-.header__title{
-    padding:50px;
-    text-align: center;
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.header__titleLink{
-    padding:10px;
+
+.header__title{
+    padding:20px 20px;
+    text-align: center;
     border-radius:10px;
     background-color:gray;
 }
+.header__titleLink{
+    padding:10px;
+}
 
+.header__MenuLabel:hover{
+    width: 100%;
+}
 .header__MenuLabel:hover .NavMenu{
-    display: list-item;
+    display:block;
 }
 
 .NavMenu{
-    padding: 0 100px;
+   /*  padding: 0 100px; */
     display: none;
+    border:solid 5px green;
+    background-color:rgba(128, 128, 128, 0.574);
+    border-radius:8px;
 }
 .NavMenu__item{
     padding:10px 8px;
     font-size: 20px;
     list-style: none; 
 }
-/* .NavMenu__item:hover .NavMenu__subtem{
-    display:list-item
-} */
-
 .NavMenu__subtem{
     padding:0 8px;
     margin-left:40px;
@@ -81,7 +104,6 @@
     background-color: aquamarine;
 }
 
-
 .NavMenu__link{
     display: block;
 }
@@ -92,6 +114,44 @@
 /*-----HEADER End-----*/
 
 
+
+
+
+/*-----MAIN Start-----*/
+.main_title{
+    margin-bottom: 30px;
+    text-align: center;  
+}
+
+.taskBlock {
+    padding: 20px;
+    margin-bottom: 10px;
+    border: solid 2px blue;
+    border-radius: 15px;
+  }
+
+.taskBlock_title{
+    margin-bottom: 15px;    
+}
+.taskBlock_title2{
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.taskBlock_inp{
+    display:block;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color:rgba(65, 155, 65, 0.418);
+    border-radius:10px;
+}
+.taskBlock_out{
+    display:block;
+    padding: 5px;
+    margin-bottom: 10px;
+    color:rgb(233, 15, 15);
+    border-radius:10px;
+}
+/*-----MAIN End-----*/
 
 
 

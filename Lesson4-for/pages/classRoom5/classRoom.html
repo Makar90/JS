@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../css/main.css">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    input,
+    select,
+    ol {
+      display: block;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    .div {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: solid 2px blue;
+      border-radius: 15px;
+    }
+
+    textarea {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <div class="header">
+      <div class="header__container container">
+        <label class="header__MenuLabel">
+          <h1 class="header__title">
+            <a class="header__titleLink link" href="../../index.html">
+              JS Notebook
+            </a>
+          </h1>
+          <nav class="NavMenu">
+            <ul>
+              <li class="NavMenu__item">
+                <a class="NavMenu__link link" href="../../index.html">
+                  Main
+                </a>
+              </li>
+              <li class="NavMenu__item">
+                <a class="NavMenu__link link" href="#"></a>
+                Lesson4 (29.12.2022)
+                <ul>
+                  <li class="NavMenu__subtem">
+                    <a class="NavMenu__link link" href="../../pages/classRoom4/classRoom.html">
+                      Classroom
+                    </a>
+                  </li>
+                  <li class="NavMenu__subtem">
+                    <a class="NavMenu__link link" href="../../pages/classRoom4/homework-Beetroot.html">
+                      Homework Beetroot
+                    </a>
+                  </li>
+                  <li class="NavMenu__subtem">
+                    <a class="NavMenu__link link" href="../../pages/classRoom4/homework-Sasha.html">
+                      Homework Sasha
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="NavMenu__item">
+                <a class="NavMenu__link link" href="#"></a>
+                Lesson 5 (03.01.2023)
+                <ul>
+                  <li class="NavMenu__subtem">
+                    <a class="NavMenu__link link NavMenu__item-selected" href="../../pages/classRoom5/classRoom.html">
+                      Classroom
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </label>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="main__container container">
+        <h2 class="main_title">Classroom 5</h2>
+
+        <section class="taskBlock">
+          <h3 class="taskBlock_title">
+            Вивести значення із списку лішками по кліку стільки разів скільки задано у полі
+          </h3>
+          <p class="taskBlock_title">
+            + перевірка на значення у полі
+          </p>
+          <p class="taskBlock_title">
+            + зачистити ввід/вивід/зкинути позицію списку при "Clear"
+          </p>
+          <input class="taskBlock_inp inp2" type="number" value="10" min="5" max="100">
+          <select class="taskBlock_inp polyInp2" name="" id="">
+            <option value="Sasha">Sasha</option>
+            <option value="Sveta">Sveta</option>
+            <option value="Olha">Olha</option>
+            <option value="Vika">Vika</option>
+          </select>
+          <ol class="taskBlock_out out2"></ol>
+          <button class="btn2">Clear</button>
+        </section>
+
+        <section class="taskBlock">
+          <h3 class="taskBlock_title">
+            Task#3
+          </h3>
+          <h4 class="taskBlock_title2">Ялинка макс висота (рядків)</h4>
+          <input class="taskBlock_inp inp3_1" type="number" value="10" min="5">
+          <!-- <p>Макс ширина (символів)</p>
+        <input class="inp3_2" type="number" value="10" min="5"> -->
+          <button class="btn3">Go!</button>
+          <p class="taskBlock_out out3"></p>
+        </section>
+
+        <section class="taskBlock">
+          <h3 class="taskBlock_title">
+            Task#4
+          </h3>
+          <h4 class="taskBlock_title2">Числа макс довжина NxN</h4>
+          <input class="taskBlock_inp inp4_1" type="number" value="10" min="5">
+          <!-- <p>Макс ширина (символів)</p>
+        <input class="inp3_2" type="number" value="10" min="5"> -->
+          <button class="btn4">Go!</button>
+          <p class="taskBlock_out out4"></p>
+        </section>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__container container">
+        <p class="footer__copyright">
+          Igor Makarenko 2023
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/classRoomScript5.js"></script>
+</body>
+
+</html>

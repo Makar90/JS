@@ -1,5 +1,21 @@
 console.log('Test Homework-Beetroot');
 
+//Commit external script
+function include(url) {
+    var script = document.createElement('script');
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+include("../../js/main.js");
+
+/* function checkNum(a) {
+    if (a == '' || Number.isInteger(+a) == false) {
+        console.log(false);
+        return false;
+    } else
+        return true;
+} */
+
 
 //Level easy
 let btn1_1 = document.querySelector('.btn1_1');
@@ -8,15 +24,7 @@ let btn3_1 = document.querySelector('.btn3_1');
 let btn4_1 = document.querySelector('.btn4_1');
 let btn5_1 = document.querySelector('.btn5_1');
 
-function checkNum(a) {
-    if (a == '' || Number.isInteger(+a) == false) {
-        console.log(false);
-        return false;
-    } else
-        return true;
-    /* let condition = `a == '' || Number.isInteger(+a) == false`;
-    eval(condition) ? return false : return true; */
-}
+
 
 //#1
 btn1_1.onclick = () => {
@@ -125,12 +133,16 @@ let btnN4_1 = document.querySelector('.btnN4_1');
 btnN1_1.onclick = () => {
     let inp = document.querySelector('.inpN1_1').value;
     let out = document.querySelector('.outN1_1');
-    out.innerHTML = 'Паліндромом';
-    for (let i = 0; i <= inp.length / 2; i++) {
-        if (inp[i] != inp[inp.length - 1 - i]) {
-            out.innerHTML = "Не паліндромом";
-            break;
+    if (inp != "") {
+        out.innerHTML = 'Паліндромом';
+        for (let i = 0; i <= inp.length / 2; i++) {
+            if (inp[i] != inp[inp.length - 1 - i]) {
+                out.innerHTML = "Не паліндромом";
+                break;
+            }
         }
+    } else {
+        out.innerHTML = `Error! Check inputed data`;
     }
 }
 
@@ -138,14 +150,18 @@ btnN1_1.onclick = () => {
 btnN2_1.onclick = () => {
     let inp = document.querySelector('.inpN2_1').value;
     let out = document.querySelector('.outN2_1');
-    if (inp >= 200 && inp < 300) {
-        out.innerHTML = `Знижка = 3%`;
-    } else if (inp >= 300 && inp < 500) {
-        out.innerHTML = `Знижка = 5%`;
-    } else if (inp >= 500) {
-        out.innerHTML = `Знижка = 7%`;
+    if (checkNum()) {
+        if (inp >= 200 && inp < 300) {
+            out.innerHTML = `Знижка = 3%`;
+        } else if (inp >= 300 && inp < 500) {
+            out.innerHTML = `Знижка = 5%`;
+        } else if (inp >= 500) {
+            out.innerHTML = `Знижка = 7%`;
+        } else {
+            out.innerHTML = `Немає знижки`;
+        }
     } else {
-        out.innerHTML = `Немає знижки`;
+        out.innerHTML = `Error! Check inputed data`;
     }
 }
 
@@ -242,6 +258,9 @@ let userChoice = document.querySelector('.inpN4_1');
 let weekDay = userChoice.selectedIndex;
 let out = document.querySelector('.outN4_1');
 btnN4_1.onclick = () => {
+    if (out.innerHTML == `?`) {
+        out.innerHTML = ``;
+    }
     if (weekDay < weekDays.length - 1) {
         weekDay++;
     } else {
@@ -250,7 +269,7 @@ btnN4_1.onclick = () => {
     out.innerHTML += `${weekDays[weekDay].value}, `;
 }
 userChoice.onchange = () => {
-    out.innerHTML = ``;
+    out.innerHTML = `?`;
 }
 
 //Level normal end
