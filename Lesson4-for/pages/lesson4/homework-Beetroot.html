@@ -11,60 +11,9 @@
 
 <body>
   <div class="wrapper">
-    <div class="header">
-      <div class="header__container container">
-        <label class="header__MenuLabel">
-          <h1 class="header__title">
-            <a class="header__titleLink link" href="../../index.html">JS
-              Notebook
-            </a>
-          </h1>
-          <nav class="NavMenu">
-            <ul>
-              <li class="NavMenu__item">
-                <a class="NavMenu__link link" href="../../index.html">
-                  Main
-                </a>
-              </li>
-              <li class="NavMenu__item">
-                <a class="NavMenu__link link" href="#"></a>
-                Lesson4 (29.12.2022)
-                <ul>
-                  <li class="NavMenu__subtem">
-                    <a class="NavMenu__link link" href="../../pages/classRoom4/classRoom.html">
-                      Classroom
-                    </a>
-                  </li>
-                  <li class="NavMenu__subtem">
-                    <a class="NavMenu__link link NavMenu__item-selected"
-                      href="../../pages/classRoom4/homework-Beetroot.html">
-                      Homework Beetroot
-                    </a>
-                  </li>
-                  <li class="NavMenu__subtem">
-                    <a class="NavMenu__link link" href="../../pages/classRoom4/homework-Sasha.html">
-                      Homework Sasha
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="NavMenu__item">
-                <a class="NavMenu__link link" href="#"></a>
-                Lesson 5 (03.01.2023)
-                <ul>
-                  <li class="NavMenu__subtem">
-                    <a class="NavMenu__link link" href="../../pages/classRoom5/classRoom.html">
-                      Classroom
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </label>
-      </div>
+    <div class="header" w3-include-html="../header.html">
+      <!-- markup writes from file by JS function w3-include-html="../"-->
     </div>
-
 
     <div class="main">
       <div class="main__container container">
@@ -205,16 +154,13 @@
       </div>
     </div>
 
-
-    <div class="footer">
-      <div class="footer__container container">
-        <p class="footer__copyright">
-          Igor Makarenko 2023
-        </p>
-      </div>
+    <div class="footer" w3-include-html="../footer.html">
+      <!-- markup writes from file by JS function w3-include-html="../"-->
     </div>
   </div>
-  <script src="../../js/homeworkBeetroot4.js"></script>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/lesson4/homeworkBeetroot4.js"></script>
 </body>
 
 </html>
