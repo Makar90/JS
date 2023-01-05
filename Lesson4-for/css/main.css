@@ -74,6 +74,9 @@ ol{
     border-radius:10px;
     background-color:gray;
 }
+.header__titleSubline{
+    font-size: 12px;
+}
 .header__titleLink{
     padding:10px;
 }
