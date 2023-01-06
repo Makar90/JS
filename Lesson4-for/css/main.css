@@ -10,11 +10,13 @@ textarea {
     margin-bottom: 10px;
   }
 button{
+    display: block;
+    margin-bottom:20px;
     border-radius:10px;
     padding:2px;
     min-width:50px;
 }
-button:hover{
+button:hover{    
     cursor:pointer;
 }
 
@@ -75,7 +77,7 @@ ol{
     background-color:gray;
 }
 .header__titleSubline{
-    font-size: 12px;
+    font-size: 14px;
 }
 .header__titleLink{
     padding:10px;
@@ -144,6 +146,7 @@ ol{
     margin-bottom: 5px;
     font-weight: 400;
 }
+
 .taskBlock_inp{
     display:block;
     padding: 5px;
