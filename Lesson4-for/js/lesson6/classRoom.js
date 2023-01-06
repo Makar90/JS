@@ -25,15 +25,26 @@ btn1_1.onclick = () => {
     fuelCalc();
 }
 //-----------------------------------------------------------------
-function fuelCalcInbound(cost, val, outField) {
-    outField.innerHTML = cost * val;
+function fuelCalcInbound(val, outField, cost = oldFuelPrice()) {
+    outField.innerHTML = val * cost;
+}
+function oldFuelPrice() {
+    let fuel = document.querySelector('.inp1_2');
+    switch (fuel.selectedIndex) {
+        case 0: {
+            return 10;
+        } break;
+        case 1: return 15; break;
+        case 2: return 20; break;
+        default: return 0;
+    }
 }
 let btn1_2 = document.querySelector('.btn1_2');
 btn1_2.onclick = () => {
     let inp1 = document.querySelector('.inp1_1').value;
     let inp2 = document.querySelector('.inp1_2').value;
     let out = document.querySelector('.out1_1');
-    fuelCalcInbound(inp1, inp2, out);
+    fuelCalcInbound(inp1, out, inp2);
 }
 //-----------------------------------------------------------------
 let btn1_3 = document.querySelector('.btn1_3');
@@ -42,7 +53,7 @@ btn1_3.onclick = () => {
     let inp2 = document.querySelector('.inp1_2').style = 'visibility:hidden;';
     let inp2Title = document.querySelector('.inp2Title1_1').style = 'visibility:hidden;';
     let out = document.querySelector('.out1_1');
-    fuelCalcInbound(inp1, 10, out);
+    fuelCalcInbound(inp1, out); `3й аргумент не передається, використовується значення по замовчуванню в оголошенні функції`
 }
 //-----------------------------------------------------------------
 

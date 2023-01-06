@@ -52,14 +52,34 @@ function addUserInfo(elementName, elementAge, elementTel, elementLi) {
                 if (checkAge(elementAge.value)) {
                     if (checkElementValue(elementTel)) {
                         if (checkTelNumber(elementTel.value)) {
-                            elementLi.innerHTML += `<li>
-                                                    <span class="tel">${elementName.value}</span>
-                                                    <span class="age">${elementAge.value}</span>
-                                                    <a class="tel" href="tel:${elementTel.value}">${elementTel.value}</a>
-                                                </li>`;
-                            clearElementValue(elementName);
-                            clearElementValue(elementAge);
-                            clearElementValue(elementTel);
+                            let valid = 0;
+                            let listItem = elementLi.querySelectorAll('.listItem');
+                            for (let i = 0; i < listItem.length; i++) {
+                                //console.log(listItem[i].querySelector('.listItemName'));
+                                let Name = listItem[i].querySelector('.listItemName');
+                                let Age = listItem[i].querySelector('.listItemAge');
+                                let Telephone = listItem[i].querySelector('.listItemTelephone');
+                                console.log(`${Name.textContent} ${Age.textContent} ${Telephone.textContent}`);
+                                if (Name.textContent == elementName.value) {
+                                    alert(`Таке ім'я "${elementName.value}" вже є в довіднику`);
+                                    valid = 1;
+                                    break;
+                                } else if (Telephone.textContent == elementTel.value) {
+                                    alert(`Такий номер телефону "${elementTel.value}" вже є в довіднику`);
+                                    valid = 1;
+                                    break;
+                                }
+                            }
+                            if (valid == 0) {
+                                elementLi.innerHTML += `<li class="listItem">
+                                                                <span class="listItemName">${elementName.value}</span>
+                                                                <span class="listItemAge">${elementAge.value}</span>
+                                                                <a class="listItemTelephone" href="tel:${elementTel.value}">${elementTel.value}</a>
+                                                            </li>`;
+                                clearElementValue(elementName);
+                                clearElementValue(elementAge);
+                                clearElementValue(elementTel);
+                            }
                         }
                     }
                 }
@@ -67,6 +87,7 @@ function addUserInfo(elementName, elementAge, elementTel, elementLi) {
         }
     }
 }
+
 
 let addButton = document.querySelector('.btn2_1')
 addButton.onclick = () => {
