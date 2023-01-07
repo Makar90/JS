@@ -23,6 +23,9 @@ button:hover{
 ol{
     margin-left: 20px; 
 }
+ul{
+    list-style: circle;/*перекриває глобальний стиль що підкл зі стилів юнітів*/
+}
 /*-----RESET CSS End-----*/
 
 
@@ -75,9 +78,11 @@ ol{
     text-align: center;
     border-radius:10px;
     background-color:gray;
+    
 }
 .header__titleSubline{
     font-size: 14px;
+    margin-bottom: 0px; /*перекриває глобальний стиль що підкл зі стилів юнітів*/
 }
 .header__titleLink{
     padding:10px;
