@@ -1,4 +1,17 @@
 console.log('JS Pattern commited');
+
+let ColoredMenu = document.querySelector('.qq');
+ColoredMenu.onclick = () => {
+    coloredSelectedMenuItem();
+}
+
+
+
+
+
+
+
+
 /* 
 //Commit external script
 function include(url) {
@@ -79,12 +92,6 @@ console.log(`--------------------------------- `);
 log1_1.value += `****** add "age" key\n`;
 log1_1.value += `---------------------------------\n`;
 
-console.log(`***** delete "age" key`);
-delete user.age;
-console.log(`--------------------------------- `);
-log1_1.value += `***** delete "age" key\n`;
-log1_1.value += `---------------------------------\n`;
-
 console.log(`Wtite current year InbuildFunction`);
 console.log(new Date().getFullYear());
 console.log(`--------------------------------- `);
@@ -115,6 +122,12 @@ console.log(`Age: ${age} `);
 console.log(`--------------------------------- `);
 log1_1.value += `Name: ${name} \n`;
 log1_1.value += `Age: ${age} \n`;
+log1_1.value += `---------------------------------\n`;
+
+console.log(`***** delete "age" key`);
+delete user.age;
+console.log(`--------------------------------- `);
+log1_1.value += `***** delete "age" key\n`;
 log1_1.value += `---------------------------------\n`;
 //----------------------------------------------------------------------------
 

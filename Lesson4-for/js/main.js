@@ -1,5 +1,9 @@
-console.log('Main JS commited');
 
+//------------------------------------------------------
+console.log('Main JS commited');
+//******************************************************
+
+//------------------------------------------------------
 function checkNum(a) {
     if (a == '' || Number.isInteger(+a) == false) {
         console.log(false);
@@ -9,8 +13,11 @@ function checkNum(a) {
     /* let condition = `a == '' || Number.isInteger(+a) == false`;
     eval(condition) ? return false : return true; */
 }
+//******************************************************
 
-/* function includeHTMLHeader(pointer) {
+//------------------------------------------------------
+/* Write header
+function includeHTMLHeader(pointer) {
     pointer.innerHTML = `<div class="header__container container">
                 <label class="header__MenuLabel">
                     <h1 class="header__title">
@@ -62,16 +69,50 @@ function checkNum(a) {
                     </nav>
                 </label>
             </div>`;
-} */
+}
 
-/* function includeHTMLFooter(pointer) {
+let pointerHeader = document.querySelector('.header');
+includeHTMLHeader(pointerHeader); 
+*/
+
+/*//Write footer
+function includeHTMLFooter(pointer) {
     pointer.innerHTML = `<div class="footer__container container">
     <p class="footer__copyright">
         Igor Makarenko 2023
     </p>
 </div>`;
-} */
+}
+let pointerFooter = document.querySelector('.footer');
+includeHTMLFooter(pointerFooter); */
+//******************************************************
 
+//------------------------------------------------------
+/*//Commit external script
+function include(url) {
+    var script = document.createElement('script');
+    script.src = url;
+    document.getElementsByTagName('body')[0].appendChild(script);
+}
+include("../../js/main.js"); */
+//******************************************************
+
+
+//------------------------------------------------------
+//Code pause v1
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function demo() {
+    //console.log('Taking a break...');
+    await sleep(2000);
+    //console.log('Two second later');
+}
+demo();
+//******************************************************
+
+//------------------------------------------------------
+//Load HTML from file by elemen atribute value
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     /*loop through a collection of all HTML elements:*/
@@ -94,9 +135,39 @@ function includeHTML() {
             }
             xhttp.open("GET", file, true);
             xhttp.send();
+            console.log(`Pattern HTML load for: ${elmnt.tagName}-"${elmnt.className}"`);
             /*exit the function:*/
             return;
         }
     }
 };
-includeHTML()
+includeHTML();
+//******************************************************
+
+
+//------------------------------------------------------
+//For colored selected item menu in loaded header
+function coloredSelectedMenuItem() {
+    let pageLinks = document.querySelectorAll('a');
+    //console.log(pageLinks);
+    let currentLocationHref = location.pathname;
+    for (let i = 0; i < pageLinks.length; i++) {
+
+        let pageLinkHref = pageLinks[i].href;
+        if (pageLinkHref.includes(currentLocationHref)) {
+            //console.log(pageLinkHref);
+            //console.log(currentLocationHref);
+            pageLinks[i].classList.toggle("NavMenu__itemSelected");
+        }
+    }
+}
+//******************************************************
+
+//------------------------------------------------------
+//Code pause v2
+console.log("Pause 1s START. To colored HTML patterns");
+setTimeout(() => {
+    coloredSelectedMenuItem();
+    console.log("Pause 2s END. HTML patterns was colored");
+}, 1000);
+//******************************************************

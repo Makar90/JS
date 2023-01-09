@@ -11,12 +11,12 @@ textarea {
   }
 button{
     display: block;
-    margin-bottom:20px;
+    margin:15px 0;
     border-radius:10px;
     padding:2px;
     min-width:50px;
 }
-button:hover{    
+button:hover{       
     cursor:pointer;
 }
 
@@ -25,6 +25,9 @@ ol{
 }
 ul{
     list-style: circle;/*перекриває глобальний стиль що підкл зі стилів юнітів*/
+}
+textarea{
+    width:70%;
 }
 /*-----RESET CSS End-----*/
 
@@ -113,7 +116,7 @@ ul{
     font-size: 16px;
     /* display: none; */
 }
-.NavMenu__item-selected{
+.NavMenu__itemSelected{
     border-radius:15px;
     background-color: aquamarine;
 }
@@ -148,21 +151,21 @@ ul{
     margin-bottom: 15px;    
 }
 .taskBlock_title2{
-    margin-bottom: 5px;
+    margin: 10px 0;
     font-weight: 400;
 }
 
 .taskBlock_inp{
     display:block;
     padding: 5px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     background-color:rgba(65, 155, 65, 0.418);
     border-radius:10px;
 }
 .taskBlock_out{
     display:block;
     padding: 5px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     color:rgb(233, 15, 15);
     border-radius:10px;
 }

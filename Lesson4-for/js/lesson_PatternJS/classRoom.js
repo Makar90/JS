@@ -8,11 +8,7 @@ function include(url) {
 }
 include("../../js/main.js"); */
 
-/* let pointerHeader = document.querySelector('.header');
-includeHTMLHeader(pointerHeader); */
 
-/* let pointerFooter = document.querySelector('.footer');
-includeHTMLFooter(pointerFooter); */
 
 
 let inp = document.querySelector('.inp1_1');
