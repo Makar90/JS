@@ -21,13 +21,13 @@ let car = {
     },
     addDriver: function (newDriverName) {
         for (let i = 0; i < this.drivers.length; i++) {
-            if (this.drivers[i] != newDriverName) {
-                this.drivers.push(newDriverName);
-                return `Водія додано до списку водіїв`;
-            } else {
+            if (this.drivers[i] == newDriverName) {
+                console.log(this.drivers[i])
                 return `Помилка!. Такий водій "${this.drivers[i]}" вже існує у списку водіїв`;
             }
         }
+        this.drivers.push(newDriverName);
+        return `Водія додано до списку водіїв`;
 
     },
     checkDriverInDriverList: function (driverName) {
@@ -42,12 +42,12 @@ let car = {
         let res = {
             time: (distance / this.averageSpeed),
             timeWithStops: function () {
-                return Math.floor(this.time / 4) > 0 ? this.time + Math.floor(this.time / 4) : 0;
+                return Math.floor(this.time / 4) > 0 ? this.time + Math.floor(this.time / 4) : this.time;
             },
             fuel: (distance / 100 * this.averageFuelConsumptionPer100Km),
         }
         //console.log(`test`);
-        console.log(`${res.time} / ${res.timeWithStops()} / ${res.fuel}`);
+        //console.log(`${res.time} / ${res.timeWithStops()} / ${res.fuel}`);
         return res;
     },
     getAllDrivers: function () {
