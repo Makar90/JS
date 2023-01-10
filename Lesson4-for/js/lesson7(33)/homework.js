@@ -115,6 +115,111 @@ btnCalcTimeAndFuel.onclick = () => {
     }
 }
 
-console.log(car.ddd);
+
+//task NORMA
+let time = {
+    hh: 1,
+    mm: 2,
+    ss: 3,
+    getTime: function () {
+        return `${this.getFormatTimePart(this.hh)}:${this.getFormatTimePart(this.mm)}:${this.getFormatTimePart(this.ss)}`;
+    },
+    changeTimeSS: function (seconds) {
+        seconds = +seconds + this.ss;
+        let minutes = Math.floor(seconds / 60);
+        if (minutes > 0) {
+            if (this.changeTimeMM(minutes)) {
+                seconds = seconds % 60;
+            } else {
+                return false;
+            }
+        }
+        this.ss = seconds;
+        return true;
+    },
+    changeTimeMM: function (minutes) {
+        minutes = +minutes + this.mm;
+        let hours = Math.floor(minutes / 60);
+        if (hours > 0) {
+            if (this.changeTimeHH(hours)) {
+                minutes = minutes % 60;
+            } else {
+                return false;
+            }
+        }
+        this.mm = minutes;
+        return true;
+    },
+    changeTimeHH: function (hours) {
+        hours = +hours + this.hh;
+        let days = Math.floor(hours / 24);
+        if (days > 0) {
+            return false;
+        }
+        this.hh = hours;
+        return true;
+    },
+    getFormatTimePart: function (timePart) {
+        return `${timePart < 10 ? '0' + timePart : timePart}`;
+    }
+}
+/*let condition1 = document.querySelector('.condition1');
+condition1.innerHTML = car.gerCarObjectDescription;*/
+
+//#1
+let btnShowTime = document.querySelector('.btnShowTime');
+btnShowTime.onclick = () => {
+    let outShowTime = document.querySelector('.outShowTime');
+    outShowTime.innerHTML = time.getTime();
+}
+
+//#2
+let btnChangeTimeSS = document.querySelector('.btnChangeTimeSS');
+btnChangeTimeSS.onclick = () => {
+    let inpChangeTimeSS = document.querySelector('.inpChangeTimeSS');
+    let outChangeTimeSS = document.querySelector('.outChangeTimeSS');
+    if (inpChangeTimeSS.value == '') {
+        outChangeTimeSS.innerHTML = `Помилка!.Значення не введене`;
+        return false;
+    }
+    if (time.changeTimeSS(inpChangeTimeSS.value)) {
+        outChangeTimeSS.innerHTML = time.getTime();
+    } else {
+        outChangeTimeSS.innerHTML = `Помилка!.Ведене значення більше однієї доби`;
+    }
+}
+
+//#3
+let btnChangeTimeMM = document.querySelector('.btnChangeTimeMM');
+btnChangeTimeMM.onclick = () => {
+    let inpChangeTimeMM = document.querySelector('.inpChangeTimeMM');
+    let outChangeTimeMM = document.querySelector('.outChangeTimeMM');
+    if (inpChangeTimeMM.value == '') {
+        outChangeTimeMM.innerHTML = `Помилка!.Значення не введене`;
+        return false;
+    }
+    if (time.changeTimeMM(inpChangeTimeMM.value)) {
+        outChangeTimeMM.innerHTML = time.getTime();
+    } else {
+        outChangeTimeMM.innerHTML = `Помилка!.Ведене значення більше однієї доби`;
+    }
+}
+
+//#4
+let btnChangeTimeHH = document.querySelector('.btnChangeTimeHH');
+btnChangeTimeHH.onclick = () => {
+    let inpChangeTimeHH = document.querySelector('.inpChangeTimeHH');
+    let outChangeTimeHH = document.querySelector('.outChangeTimeHH');
+    if (inpChangeTimeHH.value == '') {
+        outChangeTimeMM.innerHTML = `Помилка!.Значення не введене`;
+        return false;
+    }
+    if (time.changeTimeHH(inpChangeTimeHH.value)) {
+        outChangeTimeHH.innerHTML = time.getTime();
+    } else {
+        outChangeTimeHH.innerHTML = `Помилка!.Ведене значення більше однієї доби`;
+    }
+}
+
 
 

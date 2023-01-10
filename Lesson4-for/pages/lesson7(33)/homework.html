@@ -61,60 +61,75 @@
                             </ol>
                         </li>
                     </ol>
-
-
-
-
-
-
-
-                    <h4 class="taskBlock_title2">Description inp</h4>
-                    <p class="taskBlock_out out1_1">
-                        чікується у відповідь
-                    </p>
-                    <button class="btn1_1">Go!</button>
-
                 </section>
 
                 <section>
                     <h3>Норма</h3>
                     <ol>
                         <li class="taskBlock">
-                            <h4 class="taskBlock_title"></h4>
+                            <h4 class="taskBlock_title">
+                                Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з
+                                цим об'єктом:
+                                <p class="condition1">
+
+                                </p>
+                            </h4>
                             <ol>
-                                <li>
-                                    <h4 class="taskBlock_title">Створити об'єкт, що описує час (години, хвилини,
-                                        секунди), і
-                                        такі функції для роботи з
-                                        цим об'єктом:</h4>
-                                    <ol>
-                                        <li>Для виведення часу на екран.</li>
-                                        <li>Зміни часу на передану кількість секунд.</li>
-                                        <li>Зміни часу на передану кількість хвилин.</li>
-                                        <li>Зміни часу на передану кількість годин.</li>
-                                        <li>Враховуйте, що в останніх 3-х функціях, при зміні однієї частини часу, може
-                                            змінитися і
-                                            інша. Наприклад: якщо до часу «20:59:45» додати 30 секунд, то повинно вийти
-                                            «21:00:15», а не
-                                            «20:59:75». Також потрібно передбачити можливість того що користувач може
-                                            передати 150
-                                            секунд, або 75 хвилин.</li>
-                                    </ol>
+                                <li class="taskBlock">Для виведення часу на екран.
+                                    <button class="btnShowTime">виведення часу на екран</button>
+                                    <p class="outShowTime taskBlock_out">Request result</p>
+                                </li>
+                                <li class="taskBlock">Зміни часу на передану кількість секунд.
+                                    <h4 class="taskBlock_title2">
+                                        Враховуйте, що в наступних 3-х функціях, при зміні однієї частини часу, може
+                                        змінитися і інша. Наприклад: якщо до часу «20:59:45» додати 30 секунд, то
+                                        повинно
+                                        вийти «21:00:15», а не «20:59:75». Також потрібно передбачити можливість того що
+                                        користувач може передати 150 секунд, або 75 хвилин.
+                                    </h4>
+                                    <input class="inpChangeTimeSS taskBlock_inp" type="text" placeholder="seconds?" />
+                                    <button class="btnChangeTimeSS">Change time</button>
+                                    <p class="outChangeTimeSS taskBlock_out">Request result</p>
+                                </li>
+                                <li class="taskBlock">Зміни часу на передану кількість хвилин.
+                                    <input class="inpChangeTimeMM taskBlock_inp" type="text" placeholder="minutes?" />
+                                    <button class="btnChangeTimeMM">Change time</button>
+                                    <p class="outChangeTimeMM taskBlock_out">Request result</p>
+                                </li>
+                                <li class="taskBlock">Зміни часу на передану кількість годин.
+                                    <input class="inpChangeTimeHH taskBlock_inp" type="text" placeholder="hours?" />
+                                    <button class="btnChangeTimeHH">Change time</button>
+                                    <p class="outChangeTimeHH taskBlock_out">Request result</p>
                                 </li>
                             </ol>
-                            <input class=" taskBlock_inp inp1_1" type="text" placeholder="вік?" />
-                            <p>
-                                Answer:
-                                <span class="taskBlock_out out1_1">
-                                    чікується у відповідь
-                                </span>
-                            </p>
-                            <button class="btn1_1">Go!</button>
                         </li>
                     </ol>
                 </section>
 
-                <section class="taskBlock">
+                <section>
+                    <h3>Норма</h3>
+                    <ol>
+                        <li class="taskBlock">
+                            <h4 class="taskBlock_title">
+                                Створи об'єкт, що описує звичайний дріб. Створи об'єкт, який має методи роботи з дробом:
+                            </h4>
+                            <ol>
+                                <li class="taskBlock">Складання 2-х об'єктів-дробів.
+                                    <input class="inpdrib1 taskBlock_inp" type="text" placeholder="drib1?" />
+                                    <input class="inpdrib2 taskBlock_inp" type="text" placeholder="brib2?" />
+                                    <button class="btnShowTime">Складання 2-х об'єктів-дробів.</button>
+                                    <button class="btnShowTime">Віднімання 2-х об'єктів-дробів.</button>
+                                    <button class="btnShowTime">Множення 2-х об'єктів-дробів.</button>
+                                    <button class="btnShowTime">Ділення 2-х об'єктів-дробів.</button>
+                                    <button class="btnShowTime">Скорочення об'єкта-дробу.</button>
+                                    <p class="outDribRes taskBlock_out">Request result</p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </section>
+
+                <!--  <section class="taskBlock">
                     <h3 class="taskBlock_title">
                         Task#1
                     </h3>
@@ -127,7 +142,7 @@
                     </h4>
                     <span class="out1_1 taskBlock_out">Output</span>
                     <button class="btn1_1">Start</button>
-                </section>
+                </section> -->
 
             </div>
         </div>
