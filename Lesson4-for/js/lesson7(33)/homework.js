@@ -115,4 +115,6 @@ btnCalcTimeAndFuel.onclick = () => {
     }
 }
 
+console.log(car.ddd);
+
 
