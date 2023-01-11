@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/main.css">
     <title>Homework Sasha 8</title>
+    <style>
+        button {
+            display: inline;
+            margin: 5px 0;
+            padding: 5px;
+        }
+
+        .out {
+            display: grid;
+            grid-template-columns: fit-content(300px) fit-content(300px);
+            align-items: center;
+            grid-gap: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,8 +33,117 @@
         <div class="main">
             <div class="main__container container">
                 <h2 class="main_title">Homework Sasha 8</h2>
+                <input class="inp" type="text" value="1_User">
+                <input class="inp1" type="number">
+                <label for="AutoPrefixer">
+                    <input class="AutoPrefixer" type="checkbox" id="AutoPrefixer">
+                    AutoPrefixer
+                </label>
+                <button class="btn">add</button>
 
-                <section class="taskBlock">
+
+                <button class="btn2">Show all</button>
+                <div class="out">0</div>
+
+
+                <script>
+                    function showList() {
+                        out.innerHTML = '';
+                        users.map((index, item) => {
+                            out.innerHTML += `<span>${item + 1}. ${index.name}; ${index.age}</span><button class="btnDelItem"><b>Delete</b><span> (2x click for first time)</span></button>`;
+                        })
+                        btnDelItem = document.querySelectorAll('.btnDelItem');
+                    }
+
+                    function autoprefixerUser(user) {
+                        return parseInt(inp.value) + 1 + '_User';
+                    }
+
+
+
+                    let inp = document.querySelector('.inp')
+                    let inp1 = document.querySelector('.inp1')
+                    let users = [];
+
+                    document.querySelector('.btn').onclick = () => {
+                        let obj = {
+                            name: inp.value,
+                            age: inp1.value,
+                        }
+                        users.push(obj)
+                    }
+
+                    let buf1 = buf2 = '';
+                    let check = document.querySelector('.AutoPrefixer');
+                    AutoPrefixer.onchange = () => {
+                        if (AutoPrefixer.checked) {
+                            buf1 = inp.value;
+                            buf2 = inp1.value;
+                            inp.value = autoprefixerUser(inp.value);
+                            inp1.value = Math.floor(Math.random() * 100);
+                        } else {
+                            inp.value = buf1;
+                            inp1.value = buf2;
+                        }
+                    }
+
+
+
+
+
+                    let btnDelItem = 0;
+                    let out = document.querySelector('.out');
+                    document.querySelector('.btn2').onclick = () => {
+                        showList();
+                    }
+
+                    btnDelItem.onclick = () => {
+                        console.log('btnDelItem');
+                    }
+
+
+                    out.onclick = () => {
+                        console.log('8888');
+                        for (let i = 0; i < btnDelItem.length; i++) {
+                            btnDelItem[i].onclick = () => {
+                                console.log('btnDelItem' + i);
+                                users.splice(i, 1);
+                                showList();
+                            }
+                        }
+                    }
+
+                    /* document.addEventListener('DOMContentLoaded', function () {
+                        for (let i = 0; i < btnDelItem.length; i++) {
+                            //btnDelItem[i].onclick = () => {
+                            console.log('btnDelItem');
+                        }
+
+                    }, false); */
+
+                    /* document.addEventListener('DOMContentLoaded', function () {
+
+
+                        button.onclick = function () {
+                            // …
+                        };
+
+                        var container = document.getElementById('container');
+                        container.appendChild(button);
+                    }, false); */
+
+                    /*  document.querySelector('.btnDelItem').onclick = () => {
+                         console.log('btnDelItem');
+                     } */
+
+
+
+
+
+
+
+                </script>
+                <!-- <section class="taskBlock">
                     <h3 class="taskBlock_title">
                         Task#1
                     </h3>
@@ -33,7 +156,7 @@
                     </h4>
                     <span class="out1_1 taskBlock_out">Output</span>
                     <button class="btn1_1">Start</button>
-                </section>
+                </section> -->
 
             </div>
         </div>
@@ -43,7 +166,7 @@
         </div>
     </div>
     <script src="../../js/main.js"></script>
-    <script src="../../js/lesson8(34)mass/HomeworkSasha.js"></script>
+    <!-- <script src="../../js/lesson8(34)mass/HomeworkSasha.js"></script> -->
 </body>
 
 </html>
