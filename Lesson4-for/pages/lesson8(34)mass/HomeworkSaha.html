@@ -56,7 +56,12 @@
                     }
 
                     function autoprefixerUser(user) {
-                        return parseInt(inp.value) + 1 + '_User';
+                        return parseInt(inp.value) >= 0 ? parseInt(inp.value) + 1 + '_User' : '1_User';
+                    }
+
+                    function checkFullField(field) {
+                        console.log(field.value);
+                        return field.value == '' ? false : true;
                     }
 
 
@@ -66,11 +71,22 @@
                     let users = [];
 
                     document.querySelector('.btn').onclick = () => {
-                        let obj = {
-                            name: inp.value,
-                            age: inp1.value,
+                        if (checkFullField(inp) && checkFullField(inp1)) {
+                            let obj = {
+                                name: inp.value,
+                                age: inp1.value,
+                            }
+                            users.push(obj)
+                            if (AutoPrefixer.checked) {
+                                inp.value = autoprefixerUser(inp.value);
+                                inp1.value = Math.floor(Math.random() * 100);
+                            } else {
+                                inp.value = "";
+                                inp1.value = "";
+                            }
+                        } else {
+                            alert("Помилка. Поле не заповнене")
                         }
-                        users.push(obj)
                     }
 
                     let buf1 = buf2 = '';
@@ -103,10 +119,10 @@
 
 
                     out.onclick = () => {
-                        console.log('8888');
+                        console.log('Спрацював out.onclick\n і має спрацювати btnDelItem[i].onclick');
                         for (let i = 0; i < btnDelItem.length; i++) {
                             btnDelItem[i].onclick = () => {
-                                console.log('btnDelItem' + i);
+                                console.log('Спрацював btnDelItem' + i);
                                 users.splice(i, 1);
                                 showList();
                             }
