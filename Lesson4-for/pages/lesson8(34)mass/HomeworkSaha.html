@@ -53,6 +53,21 @@
                             out.innerHTML += `<span>${item + 1}. ${index.name}; ${index.age}</span><button class="btnDelItem"><b>Delete</b><span> (2x click for first time)</span></button>`;
                         })
                         btnDelItem = document.querySelectorAll('.btnDelItem');
+                        /* for (let i = 0; i < btnDelItem.length; i++) {
+                            btnDelItem[i].onclick = () => {
+                                console.log('Спрацював btnDelItem' + i);
+                                users.splice(i, 1);
+                                showList();
+                            }
+                        } */
+                        btnDelItem.forEach(
+                            (element, item) => {
+                                element.onclick = function () {
+                                    console.log('Спрацював btnDelItem ' + item);
+                                    users.splice(item, 1);
+                                    showList();
+                                }
+                            });
                     }
 
                     function autoprefixerUser(user) {
@@ -118,61 +133,19 @@
                     }
 
 
-                    out.onclick = () => {
-                        console.log('Спрацював out.onclick\n і має спрацювати btnDelItem[i].onclick');
-                        for (let i = 0; i < btnDelItem.length; i++) {
-                            btnDelItem[i].onclick = () => {
-                                console.log('Спрацював btnDelItem' + i);
-                                users.splice(i, 1);
-                                showList();
-                            }
-                        }
-                    }
-
-                    /* document.addEventListener('DOMContentLoaded', function () {
-                        for (let i = 0; i < btnDelItem.length; i++) {
-                            //btnDelItem[i].onclick = () => {
-                            console.log('btnDelItem');
-                        }
-
-                    }, false); */
-
-                    /* document.addEventListener('DOMContentLoaded', function () {
-
-
-                        button.onclick = function () {
-                            // …
-                        };
-
-                        var container = document.getElementById('container');
-                        container.appendChild(button);
-                    }, false); */
-
-                    /*  document.querySelector('.btnDelItem').onclick = () => {
-                         console.log('btnDelItem');
+                    /*  out.onclick = () => {
+                         console.log('Спрацював out.onclick\n і має спрацювати btnDelItem[i].onclick');
+                         for (let i = 0; i < btnDelItem.length; i++) {
+                             btnDelItem[i].onclick = () => {
+                                 console.log('Спрацював btnDelItem' + i);
+                                 users.splice(i, 1);
+                                 showList();
+                             }
+                         }
                      } */
 
 
-
-
-
-
-
                 </script>
-                <!-- <section class="taskBlock">
-                    <h3 class="taskBlock_title">
-                        Task#1
-                    </h3>
-                    <h4 class="taskBlock_title2">
-                        Description inp
-                    </h4>
-                    <input class="inp1_1 taskBlock_inp " type="text" placeholder="Input" value="0" />
-                    <h4 class="taskBlock_title2">
-                        Result
-                    </h4>
-                    <span class="out1_1 taskBlock_out">Output</span>
-                    <button class="btn1_1">Start</button>
-                </section> -->
 
             </div>
         </div>
