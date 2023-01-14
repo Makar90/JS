@@ -50,7 +50,7 @@
                     function showList() {
                         out.innerHTML = '';
                         users.map((index, item) => {
-                            out.innerHTML += `<span>${item + 1}. ${index.name}; ${index.age}</span><button class="btnDelItem"><b>Delete</b><span> (2x click for first time)</span></button>`;
+                            out.innerHTML += `<span>${item + 1}. ${index.name}; ${index.age}</span><button class="btnDelItem"><b>Delete</b></button>`;
                         })
                         btnDelItem = document.querySelectorAll('.btnDelItem');
                         /* for (let i = 0; i < btnDelItem.length; i++) {
