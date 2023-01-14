@@ -96,6 +96,9 @@ textarea{
 }
 .header__MenuLabel:hover .NavMenu{
     display:block;
+    max-height: 50vh;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .NavMenu{
