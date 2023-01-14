@@ -9,47 +9,6 @@
     <title>Homework Beetroot Lesson 9</title>
 </head>
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .btnShowShopBin {
-        padding: 5px;
-        margin: 10px 0;
-    }
-
-    .outShopBin {
-        display: grid;
-        grid-template-columns: repeat(9, fit-content(30%));
-        align-items: center;
-        /*grid-column-gap: 2px;*/
-    }
-
-    .outShopBin button {
-        margin: 5px 5px;
-    }
-
-    .pHeaderTable {
-        background-color: gray;
-        padding: 10px 10px 10px 0;
-        height: 100%;
-        color: white;
-    }
-
-    .likeButton {
-        cursor: pointer;
-        color: blue;
-        text-decoration: underline;
-    }
-
-    .likeButton:hover {
-        color: orange;
-    }
-</style>
-
 <body>
     <div class="wrapper">
         <!-- <div w3-include-html="../header.html">w</div> -->
@@ -59,86 +18,37 @@
 
         <div class="main">
             <div class="main__container container">
-                <h2 class="main_title">Homework Beetroot Lesson 9 (34)</h2>
+                <h2 class="main_title">Homework Beetroot Lesson 9</h2>
                 <section>
-                    <ul class="taskBlock">
-                        <h3 class="taskBlock_title">Мінімум</h3>
-                        <ol>
-                            <li>
-                                <h4 class="taskBlock_title2">
-                                    Створи масив «Список покупок». Кожен елемент масиву є об'єктом,
-                                    який містить назву продукту, кількість і куплений він чи ні, ціну за одиницю товару,
-                                    сума. Написати кілька функцій для роботи з таким масивом:</h4>
-                                <ol>
-                                    <li>
-                                        <h4 class="taskBlock_title2">
-                                            Виводити весь список на екран таким чином, щоб
-                                            спочатку йшли продукти, що ще не придбані, а потім - ті, що вже придбали.
-                                        </h4>
-
-                                        <!-- <input class="inp1_1 taskBlock_inp" type="text" placeholder="вік?" /> -->
-                                    </li>
-                                    <li>
-                                        <h4 class="taskBlock_title2">
-                                            Покупка продукту. Функція приймає назву продукту і відзначає його як
-                                            придбаний.
-                                            <!--  <input class="inpProdNameDelBin" type="text">
-                                            <button class="btnProdNameDelBin" style="display: inline;">Go!</button> -->
-                                        </h4>
-                                        <!-- <input class="inp1_1 taskBlock_inp" type="text" placeholder="вік?" /> -->
-                                    </li>
-                                </ol>
-
-                            </li>
-                            <button class="btnShowShopBin" style="display: inline;">Show
-                                shopBin</button>
-                        </ol>
-
-                        <h3 class="taskBlock_title">Норма</h3>
-                        <ol>
-                            <li>
-                                <h4 class="taskBlock_title2">
-                                    Видалення продукту зі списку (видалення повинно проводитися
-                                    шляхом створення нового масиву, в якому продукт, що ми шукаємо, буде відсутнім)
-                                </h4>
-
-                            </li>
-                            <li>
-                                <h4 class="taskBlock_title2">
-                                    Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в
-                                    списку продуктом, необхідно збільшувати кількість в існуючій покупці, а не додавати
-                                    нову. При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12, а
-                                    кількості товарів стало 2, то сума буде 24.
-                                </h4>
-                            </li>
-                        </ol>
-
-                        <h3 class="taskBlock_title">Максимум</h3>
-                        <ol>
-                            <li>
-                                <h4 class="taskBlock_title2">
-                                    Підрахунок суми всіх продуктів (враховуючи кількість кожного) в списку.
-                                </h4>
-
-                            </li>
-                            <li>
-                                <h4 class="taskBlock_title2">
-                                    Підрахунок суми всіх (не) придбаних продуктів.
-                                </h4>
-                            </li>
-                            <li>
-                                <h4 class="taskBlock_title2">
-                                    Показання продуктів в залежності від суми, (від більшого до меншого / від меншого до
-                                    більшого, в залежності від параметра функції, який вона приймає)
-                                </h4>
-                            </li>
-                        </ol>
-
-                        <hr>
-                        <div class="outShopBin taskBlock_out">
-                        </div>
-                    </ul>
+                    <h3>Мінімум</h3>
+                    <ol>
+                        <li class="taskBlock">
+                            <h4 class="taskBlock_title">Умова</h4>
+                            <h4 class="taskBlock_title2">Description inp</h4>
+                            <input class="inp1_1 taskBlock_inp" type="text" placeholder="вік?" />
+                            <p>
+                                Answer:
+                                <span class="out1_1 taskBlock_out">
+                                    чікується у відповідь
+                                </span>
+                            </p>
+                            <button class="btn1_1">Go!</button>
+                        </li>
+                    </ol>
                 </section>
+
+                <section class="taskBlock">
+                    <h3 class="taskBlock_title">Task#1</h3>
+
+                    <h4 class="taskBlock_title2">Description inp</h4>
+                    <input class="inp1_1 taskBlock_inp " type="text" placeholder="Input" value="0" />
+
+                    <h4 class="taskBlock_title2">Result</h4>
+                    <span class="out1_1 taskBlock_out">Output</span>
+
+                    <button class="btn1_1">Start</button>
+                </section>
+
             </div>
         </div>
 
