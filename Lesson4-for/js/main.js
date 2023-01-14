@@ -165,9 +165,9 @@ function coloredSelectedMenuItem() {
 
 //------------------------------------------------------
 //Code pause v2
-console.log("Pause 1s START. To colored HTML patterns");
+console.log("Pause 2s START. To colored HTML patterns");
 setTimeout(() => {
     coloredSelectedMenuItem();
     console.log("Pause 2s END. HTML patterns was colored");
-}, 1000);
+}, 2000);
 //******************************************************
