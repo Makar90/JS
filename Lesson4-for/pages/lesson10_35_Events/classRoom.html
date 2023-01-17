@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <title>Classroom 11 (35 events)</title>
+    <style>
+        .active {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- <div w3-include-html="../header.html">w</div> -->
+        <div class="header" w3-include-html="../header.html">
+            <!-- markup writes from file by JS function w3-include-html="../"-->
+        </div>
+
+        <div class="main">
+            <div class="main__container container">
+                <h2 class="main_title">Classroom #</h2>
+
+                <section class="taskBlock">
+                    <button class="btn1_1">Start1</button>
+                    <button class="btn1_2">Start2</button>
+                    <button class="btn1_2">Start2</button>
+                    <button class="btn1_2">Start2</button>
+                    <button class="btn1_2">Start2</button>
+                    <button class="btn1_2">Start2</button>
+                    <div class="div" style="width: 100px; height:100px; background-color:red;">111</div>
+                </section>
+                <!-- <section class="taskBlock">
+                    <h3 class="taskBlock_title">Task#1</h3>
+
+                    <h4 class="taskBlock_title2">Description inp</h4>
+                    <input class="inp1_1 taskBlock_inp " type="text" placeholder="Input" value="0" />
+
+                    <h4 class="taskBlock_title2">Result</h4>
+                    <span class="out1_1 taskBlock_out">Output</span>
+
+                    <button class="btn1_1">Start</button>
+                </section> -->
+
+            </div>
+        </div>
+
+        <div class="footer" w3-include-html="../footer.html">
+            <!-- markup writes from file by JS function w3-include-html="../"-->
+        </div>
+    </div>
+    <script>
+        let btn1_1 = document.querySelector('.btn1_1');
+        btn1_1.onclick = () => {
+            console.log("Test1");
+        }
+
+        btn1_1.onclick = () => {
+            console.log("Test2");
+        }
+        //спрацює тільки другий вивід
+        //-------------------------------------------------------------------------------------------
+
+
+
+
+        //Event listener
+        // (event / function / option)
+        //btn1_1.addEventListener('type', listener, options)
+        let option = {
+            'capture': true, //фаза при якій спрацьовує івент
+            'once': false, // спрацьовує один раз
+            'passive': true
+        }
+        btn1_1.addEventListener('click', () => {
+            console.log("Test1");
+        });
+        btn1_1.addEventListener('click', () => {
+            console.log("Test2");
+        });
+        //спрацює  два виводи
+        //******************
+
+        btn1_1.addEventListener('click', (event) => {
+            console.log(event);
+            console.log(event.target);
+        });
+
+
+        //слухає клік по враперу і якщо цей клік по btn1_2 то додає до нього клас active що зафарбовує бекграунд
+        // називається - Делегування події
+        let wrapper = document.querySelector('.wrapper');
+        wrapper.addEventListener('click', (event) => {
+            if (event.target.closest('.btn1_2')) {
+                event.target.classList.toggle('active');
+            }
+        })
+        //******************
+
+        //відслідковує натискання миші вниз та відпускання миші
+        function MouseClickDown() {
+            console.log("MouseClick on down by button 1");
+        }
+        function MouseClickUp() {
+            console.log("MouseClick on up by button 1");
+        }
+
+        btn1_1.addEventListener('mousedown', MouseClickDown);
+        btn1_1.addEventListener('click', MouseClickUp);
+        //******************
+
+        //відслідковує розмір екрану та виводить повідомлення в лог це десктоп чи ні
+        console.log(window);
+        console.log(window.outerWidth);
+
+        function isMobile() {
+            if (window.outerWidth > 410) {
+                //console.log(window.outerWidth);
+                console.log("It is mobile");
+            } else {
+                console.log("It isn`t mobile");
+            }
+        }
+
+        addEventListener('resize', isMobile);
+        //******************
+
+
+        //відслідковує скролл
+        let a = 0;
+        addEventListener('scroll', () => {
+            console.log(a++);
+        });
+        //******************
+
+        let div = document.querySelector(".div");
+        function move(event) {
+            div.innerHTML = `clientX = ${event.clientX}
+            clientY = ${event.clientY}`
+        }
+        div.addEventListener('mousemove', move);
+
+
+        //-------------------------------------------------------------------------------------------
+        try {
+            //пробує зробити код і переходить до виконання catch якщо виникла помилка
+            console.log("Try");
+        }
+        catch {
+            //виконує код якщо в catch виникла помилка
+            console.log("Catch: Error!");
+        }
+
+
+    </script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/lesson10_35_Events/classRoom.js"></script>
+</body>
+
+</html>
