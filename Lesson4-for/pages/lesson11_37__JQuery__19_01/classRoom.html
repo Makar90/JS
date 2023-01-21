@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <title>Classroom 11 (37) JQuery</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            margin: 5px;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- <div w3-include-html="../header.html">w</div> -->
+        <div class="header" w3-include-html="../header.html">
+            <!-- markup writes from file by JS function w3-include-html="../"-->
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="main">
+            <div class="main__container container">
+                <h2 class="main_title">Classroom 11 (37) JQuery</h2>
+
+                <!-- <section class="taskBlock">
+                    <h3 class="taskBlock_title">Task#1</h3>
+
+                    <h4 class="taskBlock_title2">Description inp</h4>
+                    <input class="inp1_1 taskBlock_inp " type="text" placeholder="Input" value="0" />
+
+                    <h4 class="taskBlock_title2">Result</h4>
+                    <span class="out1_1 taskBlock_out">Output</span>
+
+                    <button class="btn1_1">Start</button>
+                </section> -->
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+
+            </div>
+        </div>
+
+        <div class="footer" w3-include-html="../footer.html">
+            <!-- markup writes from file by JS function w3-include-html="../"-->
+        </div>
+    </div>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/lesson11_37__JQuery__19_01/classRoom.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <script>
+        $('.box');
+        $('.box').css('border', '2px solid red');
+        $('.box').parent().css('border', '20px solid orange');
+        $('.box:eq(3)').css('border', '5px solid blue');
+
+        //$('.inp').keyup
+    </script>
+</body>
+
+</html>
