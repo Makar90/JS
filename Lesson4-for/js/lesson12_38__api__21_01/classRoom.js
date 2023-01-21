@@ -1,4 +1,4 @@
-console.log('JS Pattern commited');
+console.log('JS Pattern commited_lesson12_38__api__21_01');
 /* 
 //Commit external script
 function include(url) {
