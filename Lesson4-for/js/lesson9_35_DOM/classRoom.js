@@ -1,4 +1,4 @@
-console.log('JS Pattern commited');
+console.log('JS Pattern commited clasroom 9');
 /* 
 //Commit external script
 function include(url) {

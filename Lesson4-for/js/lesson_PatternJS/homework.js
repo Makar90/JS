@@ -1,4 +1,4 @@
-console.log('JS Pattern hmework commited #');
+console.log('JS Pattern commited homework #');
 
 
 let inp = document.querySelector('.inp1_1');
