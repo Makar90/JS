@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/main.css">
-    <title>Classroom 11 (35 events)</title>
+    <title>Classroom</title>
     <style>
         .active {
             background-color: blue;
@@ -21,9 +21,10 @@
             <!-- markup writes from file by JS function w3-include-html="../"-->
         </div>
 
+
         <div class="main">
             <div class="main__container container">
-                <h2 class="main_title">Classroom #</h2>
+                <h2 class="main_title">Classroom</h2>
 
                 <section class="taskBlock">
                     <button class="btn1_1">Start1</button>
@@ -34,25 +35,16 @@
                     <button class="btn1_2">Start2</button>
                     <div class="div" style="width: 100px; height:100px; background-color:red;">111</div>
                 </section>
-                <!-- <section class="taskBlock">
-                    <h3 class="taskBlock_title">Task#1</h3>
-
-                    <h4 class="taskBlock_title2">Description inp</h4>
-                    <input class="inp1_1 taskBlock_inp " type="text" placeholder="Input" value="0" />
-
-                    <h4 class="taskBlock_title2">Result</h4>
-                    <span class="out1_1 taskBlock_out">Output</span>
-
-                    <button class="btn1_1">Start</button>
-                </section> -->
 
             </div>
         </div>
+
 
         <div class="footer" w3-include-html="../footer.html">
             <!-- markup writes from file by JS function w3-include-html="../"-->
         </div>
     </div>
+
     <script>
         let btn1_1 = document.querySelector('.btn1_1');
         btn1_1.onclick = () => {
@@ -69,13 +61,14 @@
 
 
         //Event listener
-        // (event / function / option)
-        //btn1_1.addEventListener('type', listener, options)
+        // (event / function / option)                
+        /*Example
+        btn1_1.addEventListener('type', listener, options)
         let option = {
             'capture': true, //фаза при якій спрацьовує івент
             'once': false, // спрацьовує один раз
             'passive': true
-        }
+        }*/
         btn1_1.addEventListener('click', () => {
             console.log("Test1");
         });
@@ -86,8 +79,8 @@
         //******************
 
         btn1_1.addEventListener('click', (event) => {
-            console.log(event);
-            console.log(event.target);
+            console.log(event);  // відображає івент що був зроблений 
+            console.log(event.target); //відображає джерело івенту. Наприклад дів, а вньому баттон- натискання робиться по баттон а відслідковування кліку по всьому діву
         });
 
 
