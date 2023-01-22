@@ -107,7 +107,6 @@ btnSoundsListByAuthors.onclick = () => {
     divOutSoundsList.innerHTML = '';
     divOutSoundsList.append(createSoudsListByAutorth());
 }
-
 btnSoundsList.onclick = () => {
     divOutSoundsList.innerHTML = '';
     divOutSoundsList.append(createSoudList());
@@ -118,10 +117,9 @@ btnSoundsList.onclick = () => {
 let btnModalOpen = document.querySelector('.btnModalOpen');
 let btnModalClose = document.querySelector('.btnModalClose');
 let modal = document.querySelector('.modal');
-
 btnModalOpen.onclick = () => {
     modal.classList.add('modalActive');
-    console.log('btnModalOpen.onclick');
+    //console.log('btnModalOpen.onclick');
 }
 btnModalClose.onclick = () => {
     modal.classList.remove('modalActive');
@@ -130,8 +128,6 @@ btnModalClose.onclick = () => {
 //--------------------------
 //Task3
 let btnTraffikLighterSwitch = document.querySelector('.btnTraffikLighterSwitch');
-
-
 btnTraffikLighterSwitch.onclick = () => {
     let traffikLighter = document.querySelector('.traffikLighter');
     let traffikLighterLights = traffikLighter.querySelectorAll('.traffikLighter__light');
