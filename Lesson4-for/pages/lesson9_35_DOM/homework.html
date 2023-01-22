@@ -7,6 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/main.css">
     <title>Homework Beetroot</title>
+    <style>
+        .code {
+            width: 75%;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .modal {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            ;
+            background-color: aqua;
+            border: 2px solid blue;
+            border-radius: 20px;
+            opacity: 0.9;
+            visibility: hidden;
+        }
+
+        .modalActive {
+            visibility: visible;
+        }
+
+        .btnModalClose {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            transform: translate(0%, -50%);
+        }
+
+        .traffikLighter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            background-color: black;
+            border-radius: 10px;
+            width: 60px;
+            height: 180px;
+            padding: 10px;
+        }
+
+        .traffikLighter__light {
+            background-color: gray;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,27 +74,78 @@
             <div class="main__container container">
                 <h2 class="main_title">Homework Beetroot</h2>
 
-                <section class="taskBlock">
-                    <h3 class="taskBlock_title">In progress...</h3>
-                </section>
 
-                <!-- <section>
-                    <h3>Мінімум</h3>
+                <section>
+                    <!-- <h3>Мінімум</h3> -->
                     <ol>
                         <li class="taskBlock">
-                            <h4 class="taskBlock_title">Умова</h4>
-                            <h4 class="taskBlock_title2">Description inp</h4>
-                            <input class="inp1_1 taskBlock_inp" type="text" placeholder="вік?" />
-                            <p>
-                                Answer:
-                                <span class="out1_1 taskBlock_out">
-                                    чікується у відповідь
-                                </span>
-                            </p>
-                            <button class="btn1_1">Go!</button>
+                            <h4 class="taskBlock_title">Створити сторінку, що показує нумерований список пісень:</h4>
+                            <textarea class="code codeTask1" name="" id="" rows="10">
+let playList = [
+    {
+        author: "LED ZEPPELIN",
+        song: "STAIRWAY TO HEAVEN"
+    },
+    {
+        author: "QUEEN",
+        song: "BOHEMIAN RHAPSODY"
+    },
+    {
+        author: "LYNYRD SKYNYRD",
+        song: "FREE BIRD"
+    },
+    {
+        author: "DEEP PURPLE",
+        song: "SMOKE ON THE WATER"
+    },
+    {
+        author: "JIMI HENDRIX",
+        song: "ALL ALONG THE WATCHTOWER"
+    },
+    {
+        author: "AC/DC",
+        song: "BACK IN BLACK"
+    },
+    {
+        author: "QUEEN",
+        song: "WE WILL ROCK YOU"
+    },
+    {
+        author: "METALLICA",
+        song: "ENTER SANDMAN"
+    }
+];
+                            </textarea>
+                            <!--  <h4 class="taskBlock_title2">Description inp</h4>
+                            <input class="inp1_1 taskBlock_inp" type="text" placeholder="вік?" /> -->
+                            <button class="btnSoundsListByAuthors">Sounds list by authors</button>
+                            <button class="btnSoundsList">Sounds list</button>
+                            <p>Sounds list:</p>
+                            <div class="divOutSoundsList taskBlock_out">
+                            </div>
+                        </li>
+                        <li class="taskBlock">
+                            <h4 class="taskBlock_title">Створити HTML-сторінку з кнопкою "Відкрити" і модальним вікном.
+                                На модальном вікні повинен бути текст і кнопка "Закрити". Спочатку модальне вікно не
+                                відображається. При кліку на кнопку "Відкрити" з'являється модальне вікно, на кнопку
+                                "Закрити" — зникає.</h4>
+                            <button class="btnModalOpen">Відкрити</button>
+                            <div class="modal">
+                                <button class="btnModalClose">Закрити</button>
+                            </div>
+                        </li>
+                        <li class="taskBlock">
+                            <h4 class="taskBlock_title">Створити HTML-сторінку зі світлофором і кнопкою, яка перемикає
+                                світлофор на наступний колір.</h4>
+                            <button class="btnTraffikLighterSwitch">перемикає світлофор</button>
+                            <div class="traffikLighter">
+                                <div class="traffikLighter__light" color="red" status="deactive"></div>
+                                <div class="traffikLighter__light" color="yellow" status="deactive"></div>
+                                <div class="traffikLighter__light" color="green" status="deactive"></div>
+                            </div>
                         </li>
                     </ol>
-                </section> -->
+                </section>
 
                 <!-- <section class="taskBlock">
                     <h3 class="taskBlock_title">Task#1</h3>
