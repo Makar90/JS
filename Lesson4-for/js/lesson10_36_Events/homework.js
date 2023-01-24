@@ -31,7 +31,8 @@ document.onkeydown = function (event) {
         changeTextArea2Div();
         console.log(`----- end -----`);
         //hot kets off: Ctrl+S / Ctrl+E
-        return false
+        //return false
+        event.preventDefault();
     }
 }
 
