@@ -109,6 +109,84 @@ function divChangeTextAres(keyCodesPart1, ...keyCodesPart2) {
 
 //-----------
 //Task2
+let users = [
+    {
+        listNum: 1,
+        name: 'Igor',
+        age: 18
+    },
+    {
+        listNum: 2,
+        name: 'Igor',
+        age: 18
+    },
+    {
+        listNum: 3,
+        name: 'Igor',
+        age: 18
+    },
+    {
+        listNum: 4,
+        name: 'Igor',
+        age: 18
+    },
+    {
+        listNum: 5,
+        name: 'Igor',
+        age: 18
+    }
+]
+
+function writetableUsersToArray(tableUsers) {
+    let users = [];
+    let user = {};
+    /*let tableUsersHeader = tableUsers.querySelectorAll('th');
+    console.log(tableUsersHeader);
+    tableUsersHeader.forEach((item) => {
+        user[item.innerText] = 'valueNULL';
+    })
+    console.log(user);*/
+
+    let tableUsersRows = tableUsers.querySelectorAll('tr');
+    tableUsersRows.forEach((row) => {
+        let cellsHeader = row.querySelectorAll('th');
+        if (cellsHeader.length) {
+            console.log(`Find header`);
+            cellsHeader.forEach((item => {
+                user[item.innerText] = 'valueNULL';
+            }))
+            console.log(user);
+            console.log(`------------`);
+        } else {
+            console.log(`Find row`);
+            let cells = row.querySelectorAll('td');
+            if (cells.length) {
+                console.log(`read cells in row and write to object user`);
+                let i = 0;
+                for (let index in user) {
+                    //console.log(`${index} ${user[index] = cells[i].innerText}`);
+                    user[index] = cells[i].innerText;
+                    i++;
+                }
+                console.log(`show object user`);
+                console.log(user);
+                console.log(`push object user to array users`);
+                users.push(user);
+                console.log(`show array user`);
+                console.log(users);
+                console.log(`------------`);
+            } else {
+                console.log('not header not cells');
+            }
+        }
+    });
+    console.log(`---Users`);
+    console.log(users);
+}
+
+writetableUsersToArray(document.querySelector('.tableUsers1'));
+
+
 
 
 

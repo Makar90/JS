@@ -26,10 +26,49 @@
                     <h3 class="taskBlock_title">In progress...</h3>
                     <button class="btnShazam">Shazam</button>
                     <button class="btnShazamGetTopSongs">Shazam Top Soungs</button>
-                    <div class="outApi"></div>
-                </section>
+                    <button class="btnShazamGetTopSongs2">Shazam Top Soungs2</button>
+                    <button class="btnWeather">Weather</button>
+                    <button class="btnInstagrammSerchUsers">InstagrammSerchUsers</button>
+                    <button class="btnRick_Morti">Rick Morti</button>
 
-                <!-- <section class="taskBlock">
+                    <div class="outApi"></div>
+
+
+                    <section class="taskBlock">
+                        <a id="download">Download</a>
+                        <button id="stop">Stop</button>
+                        <script>
+                            const downloadLink = document.getElementById('download');
+                            const stopButton = document.getElementById('stop');
+
+
+                            const handleSuccess = function (stream) {
+                                const options = { mimeType: 'audio/webm' };
+                                const recordedChunks = [];
+                                const mediaRecorder = new MediaRecorder(stream, options);
+
+                                mediaRecorder.addEventListener('dataavailable', function (e) {
+                                    if (e.data.size > 0) recordedChunks.push(e.data);
+                                });
+
+                                mediaRecorder.addEventListener('stop', function () {
+                                    downloadLink.href = URL.createObjectURL(new Blob(recordedChunks));
+                                    downloadLink.download = 'acetest.wav';
+                                });
+
+                                stopButton.addEventListener('click', function () {
+                                    mediaRecorder.stop();
+                                });
+
+                                mediaRecorder.start();
+                            };
+
+                            navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+                                .then(handleSuccess);
+                        </script>
+                    </section>
+
+                    <!-- <section class="taskBlock">
                     <h3 class="taskBlock_title">Task#1</h3>
 
                     <h4 class="taskBlock_title2">Description inp</h4>
