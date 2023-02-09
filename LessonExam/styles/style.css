@@ -174,9 +174,10 @@ body {
 }
 
 .header .swiper {
-    margin-top: -35px;
+    /* margin-top: -35px; */
     margin-left: -159px;
     width: 129% !important;
+    height: 540px;
 }
 
 .header .swiper-pagination {
