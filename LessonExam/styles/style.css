@@ -120,7 +120,7 @@ body {
 }
 
 .header__container {
-    background-image: url('../img/Header-background-fon.svg');
+    background-image: url('../img/Header-background-fon.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -337,7 +337,7 @@ body {
 }
 
 .latest-news .container {
-    background-image: url('../img/LATEST-NEWS-background-fon.svg');
+    background-image: url('../img/LATEST-NEWS-background-fon.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom
@@ -629,7 +629,7 @@ body {
 }
 
 .footer__container {
-    background-image: url('../img/Footer-background-fon.svg');
+    background-image: url('../img/Footer-background-fon.png');
     padding: 203px 415px 234px;
 }
 
