@@ -121,7 +121,7 @@ body {
 
 .header__container {
     background-image: url('../img/Header-background-fon.svg');
-    height: 800px;
+    height: 100vh;
 }
 
 .header__menu {

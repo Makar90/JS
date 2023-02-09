@@ -85,4 +85,4 @@ let swiper2 = new Swiper(".mySwiper2", {
 // Swiper2 END
 
 
-lightGallery(document.getElementById('gallery-mixed-content-demo'));
+//lightGallery(document.getElementById('gallery-mixed-content-demo'));
