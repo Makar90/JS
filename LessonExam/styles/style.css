@@ -121,6 +121,8 @@ body {
 
 .header__container {
     background-image: url('../img/Header-background-fon.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
 }
 
